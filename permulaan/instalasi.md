@@ -46,7 +46,18 @@ O2System Framework telah menggunakan [Composer](https://getcomposer.org/download
 composer create-project o2system/o2system [project-name]
 ```
 
-## Perizinan Direktori
+## Konfigurasi
+
+### Direktori public
+
+
+Setelah pemasangan O2ystem selesai, Anda harus memastikan bahwa konfigurasi web server/webroot mengarah ke direktori `public`. file `index.php` pada direktori tersebut merupakan front controller/bootstraping daroi all HTTP request.
+
+### File Konfigurasi
+
+Semua file configurasi O2system terletak di direktori app/Config. semua pilihan kofigurasi telah terdokumentasi dengan baik di dalam file tersebut. Anda bisa mencoba beberapa konfigurasi yang di perlukan.
+
+### permission diretori
 
 Setelah selesai melakukan instalasi O2System Framework anda wajib memastikan bahwa direktori `cache` dan `storage` dapat ditulis oleh aplikasi anda.
 
@@ -62,43 +73,102 @@ Mengubah permission pada direktori storage
 $ chmod -R 777 /path/to/your/project/storage
 ```
 
-### Membuat Virtual Host
+## Konfigurasi Web Server
 
-#### Apache
+### Apache
 
-Bagi anda yang menggunakan apache sebagai web-server anda, buatlah file `.htaccess` pada direktori root dokumen aplikasi anda lalu isikan dengan kode htaccess seperti contoh dibawah ini.
+O2system telah menyertakan konfigurasi awal file `public/.httaccess` untuk membuat sebuah url tanpa index.php pada path front controller. Sebelum menjalankan server apache, pastikan terlebih dahulu untuk mengaktikan module apache `mod_rewrite` pada `.htaccess`.
+
+
 
 ```conf
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Rewrite engine
+# ----------------------------------------------------------------------
+
+# Turning on the rewrite engine is necessary for the following rules and features.
+# FollowSymLinks must be enabled for this to work.
 <IfModule mod_rewrite.c>
-<IfModule mod_negotiation.c>
-Options -MultiViews
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    Options +FollowSymlinks -Indexes
+    RewriteEngine On
+
+    # If you installed O2System in a subfolder, you will need to
+    # change the following line to match the subfolder you need.
+    # http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
+    # RewriteBase /
+
+    # Rewrite "www.example.com -> example.com"
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
 
-Options +FollowSymlinks -Indexes
-RewriteEngine On
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
 
-# If you installed O2System in a subfolder, you will need to
-# change the following line to match the subfolder you need.
-# http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
-# RewriteBase /
+<IfModule mod_deflate.c>
 
-# Rewrite "www.example.com -> example.com"
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+	# Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+	<IfModule mod_setenvif.c>
+		<IfModule mod_headers.c>
+			SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+			RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+		</IfModule>
+	</IfModule>
 
-# Handle Front Controller...
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
-
-# Handle Authorization Header
-RewriteCond %{HTTP:Authorization} .
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+	# Compress all output labeled with one of the following MIME-types
+	# (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+	# and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines as
+	# `AddOutputFilterByType` is still in the core directives)
+	<IfModule mod_filter.c>
+		AddOutputFilterByType DEFLATE application/atom+xml \
+		                              application/javascript \
+		                              application/json \
+		                              application/rss+xml \
+		                              application/vnd.ms-fontobject \
+		                              application/x-font-ttf \
+		                              application/xhtml+xml \
+		                              application/xml \
+		                              font/opentype \
+		                              image/svg+xml \
+		                              image/x-icon \
+		                              text/css \
+		                              text/html \
+		                              text/plain \
+		                              text/x-component \
+		                              text/xml
+    </IfModule>
 </IfModule>
+
 ```
 
-## NGINX
+### NGINX
 
 Bagi anda yang menggunakan NGINX sebagai web-server, buatlah vhost untuk proyek aplikasi anda lalu isi file vhost tersebut dengan konfigurasi seperti contoh di bawah ini.
 
@@ -143,7 +213,7 @@ server {
         }
 }
 ```
-## Microsoft IIS
+### Microsoft IIS
 
 Setelah anda memastikan IIS anda sudah memiliki plugin Rewrite Rule, buatlah file web.config di root direktori project anda dan isikan seperti contoh dibawah ini.
 
