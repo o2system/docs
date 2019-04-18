@@ -13,7 +13,7 @@ hello.phtml:
 <body>
 <h1>Hello World</h1>
 <p>
-This is hallo
+This is hallo world
 </p>
 </body>
 </html>

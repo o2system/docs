@@ -36,14 +36,25 @@ Untuk mulai bekerja dengan O2System Framework anda harus memastikan server anda 
 - [Mbstring](https://www.php.net/manual/en/install.php)
 - [Tokenizer]()
 - [XML]()
-- [APCu] & [Zend OPCache]
+- [APCu]() & [Zend OPCache]
 
-## Membuat Project
+## Instalasi
+
+### Instalasi via Composer
 
 O2System Framework telah menggunakan [Composer](https://getcomposer.org/download/) sebagai Dependency Management, jadi langkah termudah untuk melakukan instalasi adalah dengan menggunakan perintah  berikut ini:
 
 ```bash
 composer create-project o2system/o2system [project-name]
+```
+
+### Verifikasi Instalasi
+
+Seteleah instalasi selesai, cek aplikasi telah berjalan dengan perintah [bawaan php web server](https://secure.php.net/manual/en/features.commandline.webserver.php) dengan menjalankan peerintah berikut ini di console.
+
+```bash
+php o2system serve
+
 ```
 
 ## Konfigurasi

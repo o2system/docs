@@ -3,6 +3,7 @@ Setiap project yang menggunakan O2System Framework memiliki 5 struktur direktori
 1. Direktori App 
 2. Direktori Cache
 3. Direktori Public
+3. Direktori Resource
 4. Direktori Storage
 5. Direktori Vendor
 

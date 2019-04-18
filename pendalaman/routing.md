@@ -8,4 +8,13 @@ O2system menangani perihal URL ini dengan serius. Jika menggunakan PHP native, u
 
 
 
-## Konsep HTTP Verb
+## Perlindungan dari CSRF
+
+
+```html
+<form action="<?=base_url('login/authenticate');?>" method="post">
+<input type="hidden" name="csrf-token" value="{{$csrfToken}}">
+</form>
+```
+
+## Redirect Routes

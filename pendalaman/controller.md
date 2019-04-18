@@ -26,7 +26,7 @@ apablia udah selesai silahkan dicek di browser dengan kesayangan anda dengan men
 
 ## Konfigurasi
 
-Secara default hasil url yang di hasilkan adalah sesui dengan anam controller yang di buat  seprti pada control diatas maka hasilnya adalah `localhost:8080/post`. Jika ingin membuat custom url yang di inginkan maka kita tinggal mengedit file `app/config/addresses.php` 
+Secara default hasil url yang di hasilkan adalah sesui dengan nama controller yang di buat  seprti pada control diatas maka hasilnya adalah `localhost:8080/post`. Jika ingin membuat custom url yang di inginkan maka kita tinggal mengedit file `app/config/addresses.php` 
 
 ```php
 <?php
