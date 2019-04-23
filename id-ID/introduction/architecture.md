@@ -25,7 +25,7 @@ Daftar library-library dasar ini merupakan bagian dari fondasi dari O2System Fra
 
 ## Model-View-Controller-Presenter (MVCP)
 
-![MVCP Diagram](images/mvc.png)
+![MVCP Diagram](../../images/mvc.png)
 
 O2System Framework mengimplementasikan arsitektur Model-View-Controller (MVC), yang sudah sangat populer dipergunakan dalam berbagai php framework lainnya. MVC adalah sebuah metode untuk memisahkan data (Model) dari tampilan (View) dan bagaimana cara memprosesnya (Controller). Lalu apa yang dimaksud dengan Presenter, Presenter merupakan sebuah metode untuk memisahkan logical-view dari tampilan (View). Didalam O2System Framework arsitektur MVC kini telah berkembang menjadi arsitektur MVCP.
 
@@ -33,7 +33,7 @@ Dalam O2System Framework presenter dibuat sebagai Item Storage design pattern cl
 
 ## Hierarchical Model-View-Controller-Presenter (HMVCP)
 
-![HMVCP Diagram](images/HMVCP.png)
+![HMVCP Diagram](../../images/HMVCP.png)
 
 HMVCP adalah evolusi dari arsitektur Model-View-Controller-Presenter (MVCP) seperti yang dijelaskan diatas untuk menyelesaikan banyak masalah skalabilitas. Sesuai dengan yang diterbitkan pada situs web JavaWorld, Juli 2000, mengusulkan agar standar tiga serangkai Model, View, dan Controller yang penerapannya dalam O2System Framework diperlengapi dengan keberadaan Presenter dilapisi menjadi "hierarchy of parent-child MCVP layers". Gambar di bawah menggambarkan bagaimana ini bekerja:
 
