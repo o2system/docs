@@ -1,7 +1,21 @@
 
-### Html
+# Html
+Helper HTML berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/memanipulasi tag HTML.
 
-#### tag
+## Loading Helper HTML
+
+Helper HTML dapat di load dengan perintah berikut ini.
+
+```php
+$this->load->helper('html');
+```
+
+
+## Fungsi yang tersedia
+
+Berikut ini merupakan beberapa helper html yang tersedia.
+
+### tag
 
 ```php
 $tagName = 'label';
@@ -13,7 +27,7 @@ tag($tagName, $contents, $attributes)
 // <label for="title" class="control-label">Title </label> 
 ```
 
-#### video
+### video
 
 ```php
 $src = 'video.mp4';
@@ -22,7 +36,7 @@ video($src)
 // <video width="320" height="240" controls> VIDEO_NOT_SUPPORTED </video>
 ```
 
-#### audio
+### audio
 
 ```php
 $src = 'audio.mp3';
@@ -33,7 +47,7 @@ audio($src, array $attributes = [])
 // </audio> 
 ```
 
-#### canvas
+### canvas
 
 ```php
 
@@ -44,20 +58,27 @@ canvas($attributes)
 // </canvas> 
 ```
 
-#### heading
+### heading
+
+Fungsi untuk membuat seubuah tag heading, diaman paramater pertama berisi data sedangakan paramater kedia adalah ukurang heding.
 
 ```php
-$textContent = 'title';
-$level = 2;
-$attributes = array('class' => 'heading');
-heading($textContent, $level, $attributes)
+heading('Welcome!', 3);
 
-// <h2 class="heading">
-// title
-// </h2>
+// <h3>Welcome!</h3>
 ```
 
-#### ul
+Selain itu utnuk menambahkan attribut tke htag heading seperti class, id, attribute html gunakan paramater ketiga seperti berikut ini.
+
+```php
+heading('Welcome!', 3, 'class="pink"');
+heading('How are you?', 4, array('id' => 'question', 'class' => 'green'));
+
+// <h3 class="pink">Welcome!<h3>
+// <h4 id="question" class="green">How are you?</h4>
+```
+
+### ul
 
 ```php
 $list = array('Merah', 'kuning', 'Biru', 'Hitam', 'Putih' );
@@ -67,7 +88,7 @@ ul($list, $attributes)
 // 
 ```
 
-#### ol
+### ol
 
 ```php
 $list = array('Merah', 'kuning', 'Biru', 'Hitam', 'Putih' );
@@ -83,24 +104,19 @@ ol($list, $attributes)
 // </ol>
 ```
 
-#### img
+### img
+
+Fungsi untuk membuat sebuah tag html `<img />`. Paramater pertama berisi sumber gambar.
 
 ```php
-$src = 'image.jpg';
-$alt = 'title';
-$attributes = array('class' => 'list-style');
-img($src, $alt, $attributes)
+img('images/picture.jpg'); 
 
-// <ul class="list-style">
-// <li>Merah</li>
-// <li>kuning</li>
-// <li>Biru</li>
-// <li>Hitam</li>
-// <li>Putih</li>
-// </ul>
+// <img src="http://site.com/images/picture.jpg" />
 ```
 
-#### meta
+Ada parameter kedua yang bersifat opsional yang merupakan nilai boolean 
+
+### meta
 
 ```php
 $meta = 'generator';
@@ -111,14 +127,14 @@ meta($meta, $content, $type)
 // <meta name="generator" content="O2CMS - Liquid Content Management System">
 ```
 
-#### parse_attributes
+### parse_attributes
 
 ```php
 parse_attributes($string)
 // 
 ```
 
-#### remove_tags
+### remove_tags
 
 ```php
 $html = = "<div> Anim pariatur cliche reprehenderit.</div>";
@@ -128,7 +144,7 @@ remove_tags($html, $tags)
 // Anim pariatur cliche reprehenderit.
 ```
 
-#### extract_tag
+### extract_tag
 
 ```php
 extract_tag($html, $tag = 'div')

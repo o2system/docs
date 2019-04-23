@@ -5,7 +5,7 @@ Helper Datetime berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/me
 
 ## Loading Helper Array
 
-Helper Array dapat di load dengan perintah berikut ini.
+Helper Datetime dapat di load dengan perintah berikut ini.
 
 ```php
 $this->load->helper('datetime');
@@ -14,7 +14,7 @@ $this->load->helper('datetime');
 
 ## Fungsi yang tersedia
 
-Berikut ini merupakan beberapa helper common yang tersedia.
+Berikut ini merupakan beberapa helper Datetime yang tersedia.
 
 ### timestamp
 
