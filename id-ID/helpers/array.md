@@ -15,10 +15,7 @@ $this->load->helper('array');
 
 ### array_get_value
 
-`array_get_value($key, array $array, $default = null)`
-
-|-----------|--------------------|
-
+Menentukan nilai dari sebuah array dari indeks tertentu.
 
 ```php
 $arr = array('biru' => 'Blue', 'kuning' => 'Yellow');
@@ -29,6 +26,8 @@ array_get_value($key, $arr);
 ```
 
 ### array_get_values
+
+Menentukan beberapa nilai dari sebuah dengan indeks tertentu.
 
 ```php
 $arr = array('biru' => 'Blue', 'kuning' => 'Yellow', 'hitam' => 'Black');
@@ -44,6 +43,7 @@ array_get_values($key, $arr);
 
 ### array_combines
 
+Membuat sebuah array dengan menggunakan sebuah 
 
 ```php
 $arr = array('biru' => 'Blue', 'kuning' => 'Yellow', 'hitam' => 'Black');
@@ -58,6 +58,8 @@ array_combines($key, $arr);
 // )
 ```
 ### array_group
+
+Menggabungkan beberapa dengan menggunakan 
 
 ```php
 

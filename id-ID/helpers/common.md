@@ -1,7 +1,20 @@
 
-### Common
+# Common
 
-#### is_php
+Helper Common merupakan beberapa fungsi helper yang digunakan untuk mengecek system, boolean, permission dll.
+
+## Loading Helper Common
+
+Secara default helper common telah di load di dalam system. namun jika helper common tidak bisa di panggil maka bisa dengan menggunakan perintah berikut ini.
+
+```php
+$this->load->helper('common');
+```
+## Fungsi yang tersedia
+
+Berikut ini merupakan beberapa helper common yang tersedia.
+
+### is_php
 
 Menentukan apakah versi php sekarang yang digunakan sama dengan atau lebih besar.
 
@@ -11,7 +24,7 @@ is_php(7.2);
 // (bool) TRUE
 ```
 
-#### is_true
+### is_true
 
 Fungsi helper untuk mengecek boolean TRUE
 
@@ -20,7 +33,7 @@ is_true(true)
 
 // (bool) TRUE
 ```
-#### is_false
+### is_false
 
 
 Fungsi helper untuk mengecek boolean FALSE
@@ -31,7 +44,7 @@ is_true(false)
 // (bool) FALSE
 ```
 
-#### is_really_writable
+### is_really_writable
 
 Fungsi helper untuk mengecek sebuah file tersebut bisa di tulis atau tidak.
 
@@ -41,7 +54,7 @@ is_really_writable('file.txt')
 // (bool) TRUE
 ```
 
-#### is_https
+### is_https
 
 sebuah fungsi helper yang digunakan untuk mengecek apakah aplikasi web di akses melalui enkripsi(HTTPS)
 
@@ -51,7 +64,7 @@ is_https()
 // (bool) TRUE
 ```
 
-#### is_cli
+### is_cli
 
 Sebuah fungsi untuk mengecek apakah request di panggil datri comand line
 
@@ -61,7 +74,7 @@ is_cli()
 // (bool) TRUE
 ```
 
-#### is_ajax
+### is_ajax
 
 Sebuah fungsi untuk mengecek apakah request berupa ajax
 
@@ -71,7 +84,7 @@ is_cli()
 // (bool) TRUE
 ```
 
-#### remove_invisible_characters
+### remove_invisible_characters
 
 Fungsi ini digunakan untuk mencegah karakter null di antara karakter accii seperti Java\0script.
 
@@ -83,7 +96,7 @@ remove_invisible_characters($str);
 // Fungsi ini digunakan untuk mencegah karakter null di antara karakter accii seperti Javascript.
 ```
 
-#### function_usable
+### function_usable
 
 Menjalankan pemeriksaan `function_exists()` dan jika esktensi php suhosin telah di muat.
 
@@ -93,7 +106,7 @@ function_usable('is_php');
 (bool) TRUE
 ```
 
-#### apache_request_headers
+### apache_request_headers
 
 Mendapatkan nilai [apache header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) dari sebuah request client.
 
@@ -115,7 +128,7 @@ Array
 )
 ```
 
-#### path_to_url
+### path_to_url
 
 mendapatkan  url dari sebuah class controller yang telah di buat.
 
@@ -125,7 +138,7 @@ path_to_url(Hello::class)
 // http://localhost:8000/App/Controllers/Hello
 ```
 
-#### get_namespace
+### get_namespace
 
 Mendapatkan nama [namespace](https://en.wikipedia.org/wiki/Namespace) dari sebuah class yang di minta.
 
@@ -133,7 +146,7 @@ Mendapatkan nama [namespace](https://en.wikipedia.org/wiki/Namespace) dari sebua
 
 // App\Controllers\
 ```
-#### get_class_name
+### get_class_name
 
 Fungsi mendapatkan nama class yang di definisikan.
 
@@ -144,7 +157,7 @@ get_class_name(Hello::class)
 // Hello
 ```
 
-#### prepare_class_name
+### prepare_class_name
 
 
 
@@ -154,7 +167,7 @@ prepare_class_name(Hello::class)
 // App\Controllers\Hello
 ```
 
-#### prepare_filename
+### prepare_filename
 
 ```php
 prepare_filename(Hello::class)
@@ -162,7 +175,7 @@ prepare_filename(Hello::class)
 // App/Controllers/Hello
 ```
 
-#### prepare_namespace
+### prepare_namespace
 
 ```php
 prepare_namespace(Hello::class)
@@ -170,8 +183,8 @@ prepare_namespace(Hello::class)
 // App\Controllers\
 ```
 
-#### http_parse_headers
-#### is_html
+### http_parse_headers
+### is_html
 
 ```php
 $str = "ini html";
@@ -181,7 +194,7 @@ is_html($str)
 // (bool) TRUE
 ```
 
-#### is_serialized
+### is_serialized
 
 ```php
 $arr = array('O2system', 'Framework');
@@ -196,7 +209,7 @@ is_serialized($data)
 ```
 
 
-#### is_json
+### is_json
 
 Fungsi `is_json` untuk mengecek sebuah ojeck dalam bentuk json.
 
@@ -210,11 +223,11 @@ is_json($myJSON);
 // (bool) TRUE
 ```
 
-#### is_parse_string
+### is_parse_string
 
 
 
-#### is_multidimensional_array
+### is_multidimensional_array
 
 Fungsi `is_multidimensional_array` digunakan untuk mengecek apakah sebuah array dalam bentuk array multidimensi.
 
@@ -232,7 +245,7 @@ is_multidimensional_array($cars);
 // (bool) TRUE
 ```
 
-#### is_associative_array
+### is_associative_array
 
 Fungsi `is_associative_array` adalah fungsi untuk mengecek apakah sebuah arrat merupakan array yang telah mempunyai 
 
@@ -245,7 +258,7 @@ is_associative_array($array);
 
 // (bool) TRUE
 ```
-#### is_indexed_array
+### is_indexed_array
 
 
 ```php
@@ -254,7 +267,7 @@ is_indexed_array($arr);
 
 // (bool) TRUE
 ```
-#### error_code_string
+### error_code_string
 
 Menampilkan pesan kode error.
 
