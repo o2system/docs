@@ -137,7 +137,7 @@ parse_attributes($string)
 ### remove_tags
 
 ```php
-$html = = "<div> Anim pariatur cliche reprehenderit.</div>";
+$html = "<div> Anim pariatur cliche reprehenderit.</div>";
 $tags = 'div';
 remove_tags($html, $tags)
 
@@ -147,6 +147,10 @@ remove_tags($html, $tags)
 ### extract_tag
 
 ```php
+
+$html = "<div> Anim pariatur cliche reprehenderit.</div>";
+$tags = 'div';
 extract_tag($html, $tag = 'div')
+
 // Anim pariatur cliche reprehenderit.
 ```

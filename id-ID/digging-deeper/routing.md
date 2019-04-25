@@ -31,6 +31,19 @@ $addresses->delete('...', '...');
 $addresses->option('...', '...');
 $addresses->trace('...', '...');
 ```
+Misalnya untuk membuat URL ke halaman kontak, kita bisa menambah baris berikut di file
+`app/Config/Addresses.php`:
+
+
+```php
+use O2System\Kernel\Http\Router\Addresses;
+
+$addresses = new Addresses();
+
+$addresses->get('kontak', function() {
+return '<h1>halaman kontak</h1>';
+});
+```
 
 ## Perlindungan dari CSRF
 
