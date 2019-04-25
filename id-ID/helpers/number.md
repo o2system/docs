@@ -1,6 +1,22 @@
 
 ### Number
 
+
+Helper Number berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/memanipulasi Number.
+
+## Loading Helper Number
+
+Helper Number dapat di load dengan perintah berikut ini.
+
+```php
+$this->load->helper('number');
+```
+
+
+## Fungsi yang tersedia
+
+Berikut ini merupakan beberapa helper Number yang tersedia.
+
 #### is_positive
 
 ```php

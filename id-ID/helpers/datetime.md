@@ -1,10 +1,24 @@
 
-### Datetime
+# Datetime
+
+Helper Datetime berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/memanipulasi waktu.
+
+## Loading Helper Array
+
+Helper Datetime dapat di load dengan perintah berikut ini.
+
+```php
+$this->load->helper('datetime');
+```
 
 
-#### timestamp
+## Fungsi yang tersedia
 
-Fungsi untuk mencetak  waktu sekarang.
+Berikut ini merupakan beberapa helper Datetime yang tersedia.
+
+### timestamp
+
+Fungsi untuk mencetak  waktu sql.
 
 ```php
 timestamp()
@@ -12,16 +26,16 @@ timestamp()
 // 2019-04-22 17:46:24
 ```
 
-#### unix_timestamp
+### unix_timestamp
 
-Fungsi untuk mencetak waktu sekarang dalam bentuk kode point.
+Fungsi untuk mencetak waktu sekarang dalam bentuk kode point(unix).
 
 ```php
 unix_timestamp()
 
 // (int) 1555930056
 ```
-#### format_date
+### format_date
 
 Fungsi untuk mengformat tanggal dalam bentuk hari, tanggal dan waktu.
 
@@ -32,7 +46,7 @@ format_date()
 // Monday, 22-April-2019 05:48:55 pm
 ```
 
-#### parse_date
+### parse_date
 
 Fungsi untuk mnegurai tanggal dalam beberapa kelompok seperti hari, tanggal, bulan tahun dll.
 
@@ -67,9 +81,9 @@ parse_date()
 // )
 ```
 
-#### day_name
+### day_name
 
-Fungsi untuk mendaptkan nama hari suatu tanggal.
+Fungsi untuk mendapatkan nama hari suatu tanggal.
 
 ```php
 day_name()
@@ -77,7 +91,7 @@ day_name()
 // Mon
 ```
 
-#### month_name
+### month_name
 
 Fungsi untuk mendapatkan nama bulan dari waktu yang di inputkan.
 
@@ -86,7 +100,7 @@ month_name()
 
 // Apr
 ```
-#### time_meridiem
+### time_meridiem
 
 Fungsi untuk mendapatkan waktu dalam bentuk siang atau malam hari.
 
@@ -96,7 +110,7 @@ time_meridiem()
 // Daytime
 ```
 
-#### string_time_elapsed
+### string_time_elapsed
 
 Fungsi untuk mendapatkan waktu yang telah di lalui.
 
@@ -106,7 +120,7 @@ string_time_elapsed('2001-12-28')
 // 17 Years Ago
 ```
 
-#### dates_between
+### dates_between
 
 Fungsi untuk mednapatkan rentang waktu dari dua tanggal yang di ketahui.
 
@@ -124,7 +138,7 @@ dates_between('2001-12-28', '2002-01-01');
 // ) 
 ```
 
-#### time_range
+### time_range
 
 Fungsi untuk mengetahui rentan  waktu jam antara dalam batas tertentu
 
@@ -160,7 +174,7 @@ time_range(12, 60)
 // )
 ```
 
-#### calculate_days
+### calculate_days
 
 Fungsi untuk menghitung rentang hari.
 
@@ -175,7 +189,7 @@ calculate_days($start_date, $end_date, $hour = '12:00:00 am');
 ```
 
 
-#### calculate_weeks
+### calculate_weeks
 
 Fungsi untuk menghitung rentang minggu.
 
@@ -190,7 +204,7 @@ calculate_weeks($start_date, $end_date, $hour = '12:00:00 am')
 ```
 
 
-#### is_weekend
+### is_weekend
 
 
 Fungsi untuk mengecek tanggal tersebut akhir pekan.
@@ -204,7 +218,7 @@ is_weekend($date);
 ```
 
 
-#### is_weekday
+### is_weekday
 
 Fungsi untuk mengecek tanggal tersebut akhir minggu.
 
@@ -217,7 +231,7 @@ is_weekday($date);
 ```
 
 
-#### get_age
+### get_age
 
 Fungsi untuk mendapatkan umur seseorang.
 
@@ -229,7 +243,7 @@ get_age($date);
 // (int) 18 
 ```
 
-#### get_tenure
+### get_tenure
 
 Fungsi untuk mendapatkan masa kerja seseorang dari mulai sampai tanggal berakhir.
 
@@ -242,7 +256,7 @@ get_tenure($date);
 ```
 
 
-#### time_breakdown
+### time_breakdown
 
 Fungsi untuk mencacah timestamp menjadi sebuah array hari bulan, dari waktu saat ini.
 
@@ -261,7 +275,7 @@ time_breakdown($date)
 // ) 
 ```
 
-#### sec2hms
+### sec2hms
 
 Fungsi untuk mengubah detik ke dalam menit, jam, hari dan seterusnya.
 
@@ -272,7 +286,7 @@ sec2hms(400)
 ```
 
 
-#### add_time_duration
+### add_time_duration
 
 ```php
 $date = '2000-04-28 18:19:40';
@@ -282,7 +296,7 @@ add_time_duration($date, 12);
 // (int) 956963980
 ```
 
-#### calculate_hours
+### calculate_hours
 
 Fungsi untuk menghitung selisih jam.
 
@@ -295,7 +309,7 @@ calculate_hours($start_time, $end_time);
 // 05:53
 ```
 
-#### time_difference
+### time_difference
 
 Fungsi untuk perbedaan waktu dan mencacah waktu yang kedalam bentuk array.
 
@@ -320,7 +334,7 @@ $end_time = '2001-04-28 18:01:01';
 ```
 
 
-#### weeks_in_month
+### weeks_in_month
 
 Fungsi untuk mengihitung jumalh minggu dalam bulan di tahun tertentu.
 
@@ -331,7 +345,7 @@ weeks_in_month(4, 2000)
 // (int) 5
 ```
 
-#### monday_of_week
+### monday_of_week
 
 Fungsi untuk menhitung jumlah bulan dari awal januari (awal perhitungan) sampai 
 
@@ -341,7 +355,7 @@ monday_of_week(2)
 // (int) 21 
 ```
 
-#### week_number_of_month
+### week_number_of_month
 
 ```php
 week_number_of_month(2, 12, 2019)
@@ -349,7 +363,7 @@ week_number_of_month(2, 12, 2019)
 // (int) 2
 ```
 
-#### format_time
+### format_time
 
 ```php
 format_time(92723762);
@@ -370,7 +384,9 @@ format_time(92723762);
 // )
 ```
 
-#### now
+### now
+
+Mencetak waktu saat ini berdasarkan referensi waktu lokal server atua zona waktu yang di dukung oleh php.
 
 ```php
 now()
@@ -378,8 +394,9 @@ now()
 // (int) 1555933030
 ```
 
-#### mdate
+### mdate
 
+Fungsi ini identik dengan fungsi `date()` PHP, kecu
 ```php
 $datestring = 'Year: %Y Month: %m Day: %d - %h:%i %a';
 $time = time();
@@ -389,8 +406,19 @@ mdate($datestring, $time);
 // Year: 2019 Month: 04 Day: 22 - 06:42 pm
 ```
 
-#### timespan
+> jika timestamp tidak menyertakan paramater detik maka akan menggunakan waktu sekarang yang digunakan.
 
+### timespan
+
+Menformat waktu timestamp unix sehingga menjadi tampak seperti berikut ini.
+
+```
+1 Year, 10 Months, 2 Weeks, 5 Days, 10 Hours, 16 Minutes
+```
+
+Parameter pertama harus berisi waktu UNIX , paramater kedua berisi berisi waktu yang lebih besar dari pada paramter pertama. sedangakan untuk paramater ketiga bersifat oppsional untuk membatasi jumlah unit waktu yang di tampilkan.
+
+Keuntungan mendugnakn fungsi ini adalah Anda tidak perlu khawatir akan keluar karakter apapun yang bukan kode tanggal, sperti yang biasanya harus Anda lakukan pada fungsi `date()`.
 
 ```php
 $post_date = '1079621429';
@@ -398,65 +426,96 @@ $now = time();
 $units = 2;
 timespan($post_date, $now, $units);
 
-// 
+// 15 Years, 1 Month
 ```
 
 
-#### days_in_month
+### days_in_month
+
+Mengembalikan jumlah hari dalam bulan/tahun tertentu. Menggunakan tahun kabisat.
 
 ```php
 days_in_month(06, 2005);
-// 
+
+// (int) 30 
 ```
+Jika paramater tahun kosong, maka tahun sekarang yang digunakan.
 
 
-#### local_to_gmt
+### local_to_gmt
 
+Mengambil input waktu timestamp UNIX dan mengembalikanya ke dalam bentuk GMT.
 
 ```php
 local_to_gmt(time());
 
-// 
+// (int) 1555990937
 ```
 
-#### gmt_to_local
+### gmt_to_local
 
+Menkonversi waktu timestamp UNIX ke format GMT yang di alokasikan ke dalam bentuk zona waktu.
 
 ```php
 $timestamp = 1140153693;
 $timezone  = 'UM8';
 $daylight_saving = TRUE;
 gmt_to_local($timestamp, $timezone, $daylight_saving);
-// 
+
+// (int) 1140128493
 ```
 
-#### mysql_to_unix
+### mysql_to_unix
+
+Mengambil timestamp MySQL sebagai input dan megembalikannya dalam bentuk UNIX timestamp
+
 
 ```php
 mysql_to_unix('20061124092345');
-// 
+
+// (int) 1164335025
 ```
 
-#### unix_to_human
+### unix_to_human
+
+Mengambil timestamp UNIX sebagai inut dan mengembalikan dalam bentuk format waktu yang bisa di baca oleh manusia dengan prototype sebagai berikut ini
+
+```
+YYYY-MM-DD HH:MM:SS AM/PM
+```
+
+Hal ini akan sangat berguna jika Anda ingin menampilkan data dalam bentuk form untuk sebuah pengiriman.
+
+Waktu bisa di format dengan atau tanpa detik, dan dapat di ataus ke format Waktu Eropa maupun AS.  Jika timestamp di kirimkan. waktu akan di kembalikan tanpa embel detik dan dalam format AS.
+
 
 ```php
 $now = time();
 echo unix_to_human($now); // U.S. time, no seconds
 echo unix_to_human($now, TRUE, 'us'); // U.S. time with seconds
 echo unix_to_human($now, TRUE, 'eu'); // Euro time with seconds
-// 
+
+// 2019-04-23 05:44 PM
+// 2019-04-23 05:44:53 PM 
+// 2019-04-23 17:45:10
 ```
 
-#### human_to_unix
+### human_to_unix
+
+Kebalikan dari fungsi `unix_to_human()`. Fungsi ini mengambil waktu "manusia" ke dllaman  bentuk timestamp UNIX.
 
 ```php
 $now = time();
 $human = unix_to_human($now);
 $unix = human_to_unix($human);
-// 
+
+// 2019-04-23 05:45 PM
+// (int) 1556016360 
 ```
 
-#### nice_date
+### nice_date
+
+Fungsi untuk memgambil sebuah format tanggal dalam format buruk dan mengubahnya menjadi format yang baik.
 
 ```php
 $bad_date = '199605';
@@ -469,16 +528,84 @@ $better_date = nice_date($bad_date, 'Y-m-d');
 // 
 ```
 
-#### timezones
+### timezones
+
+Mengmbil referensi zona waktu dan mengembalikannya ke dalam bentuk jam berdasarkan UTC
 
 ```php
 timezones('UM5');
-// 
+
+// (int) -5
 ```
 
-#### date_range_unix
+### date_range_unix
+
+
+Mencetak daftar tanggal dalam periode tertentu.
 
 ```php
+date_range_unix('2012-01-01', '2012-01-15')
 
-// 
+// Array
+// (
+//     [0] => 2012-01-01
+//     [1] => 2012-01-02
+//     [2] => 2012-01-03
+//     [3] => 2012-01-04
+//     [4] => 2012-01-05
+//     [5] => 2012-01-06
+//     [6] => 2012-01-07
+//     [7] => 2012-01-08
+//     [8] => 2012-01-09
+//     [9] => 2012-01-10
+//     [10] => 2012-01-11
+//     [11] => 2012-01-12
+//     [12] => 2012-01-13
+//     [13] => 2012-01-14
+//     [14] => 2012-01-15
+// ) 
 ```
+
+
+|Time Zone	|Lokasi|
+|----|-------|
+|UM12	|(UTC - 12:00) Baker/Howland Island
+|UM11	|(UTC - 11:00) Samoa Time Zone, Niue
+|UM10	|(UTC - 10:00) Hawaii-Aleutian Standard Time, Cook Islands
+|UM95	|(UTC - 09:30) Marquesas Islands
+|UM9	|(UTC - 09:00) Alaska Standard Time, Gambier Islands
+|UM8	|(UTC - 08:00) Pacific Standard Time, Clipperton Island
+|UM7	|(UTC - 07:00) Mountain Standard Time
+|UM6	|(UTC - 06:00) Central Standard Time
+|UM5	|(UTC - 05:00) Eastern Standard Time, Western Caribbean
+|UM45	|(UTC - 04:30) Venezuelan Standard Time
+|UM4	|(UTC - 04:00) Atlantic Standard Time, Eastern Caribbean
+|UM35	|(UTC - 03:30) Newfoundland Standard Time
+|UM3	|(UTC - 03:00) Argentina, Brazil, French Guiana, Uruguay
+|UM2	|(UTC - 02:00) South Georgia/South Sandwich Islands
+|UM1	|(UTC -1:00) Azores, Cape Verde Islands
+|UTC	|(UTC) Greenwich Mean Time, Western European Time
+|UP1	|(UTC +1:00) Central European Time, West Africa Time
+|UP2	|(UTC +2:00) Central Africa Time, Eastern European Time
+|UP3	|(UTC +3:00) Moscow Time, East Africa Time
+|UP35	|(UTC +3:30) Iran Standard Time
+|UP4	|(UTC +4:00) Azerbaijan Standard Time, Samara Time
+|UP45	|(UTC +4:30) Afghanistan
+|UP5	|(UTC +5:00) Pakistan Standard Time, Yekaterinburg Time
+|UP55	|(UTC +5:30) Indian Standard Time, Sri Lanka Time
+|UP575	|(UTC +5:45) Nepal Time
+|UP6	|(UTC +6:00) Bangladesh Standard Time, Bhutan Time, Omsk Time
+|UP65	|(UTC +6:30) Cocos Islands, Myanmar
+|UP7	|(UTC +7:00) Krasnoyarsk Time, Cambodia, Laos, Thailand, Vietnam
+|UP8	|(UTC +8:00) Australian Western Standard Time, Beijing Time
+|UP875	|(UTC +8:45) Australian Central Western Standard Time
+|UP9	|(UTC +9:00) Japan Standard Time, Korea Standard Time, Yakutsk
+|UP95	|(UTC +9:30) Australian Central Standard Time
+|UP10	|(UTC +10:00) Australian Eastern Standard Time, Vladivostok Time
+|UP105	|(UTC +10:30) Lord Howe Island
+|UP11	|(UTC +11:00) Srednekolymsk Time, Solomon Islands, Vanuatu
+|UP115	|(UTC +11:30) Norfolk Island
+|UP12	|(UTC +12:00) Fiji, Gilbert Islands, Kamchatka, New Zealand
+|UP1275	|(UTC +12:45) Chatham Islands Standard Time
+|UP13	|(UTC +13:00) Phoenix Islands Time, Tonga
+|UP14	|(UTC +14:00) Line Islands
