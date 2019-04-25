@@ -1,4 +1,6 @@
-Presenter adalah kelas yang berisi logika yang diperlukan untuk menghasilkan tampilan (atau view) Anda. Ketika controller dilakukan dengan input pengguna Anda dan dilakukan dengan tindakan apa pun yang diperlukan untuk mengambil, itu mengalihkan eksekusi ke Presenter untuk mengambil dan memproses data apa pun yang diperlukan untuk tampilan. Presenter tidak boleh melakukan manipulasi data apa pun tetapi dapat berisi panggilan basis data dan operasi pengambilan atau persiapan lainnya yang diperlukan untuk menghasilkan data Tampilan.
+# Presenter
+
+Presenter merupakan class PHP yang berisi logika yang diperlukan untuk menghasilkan view. Ketika pengendali dilakukan dengan masukan pengguna Anda dan dilakukan dengan tindakan apa pun yang diperlukan untuk dilakukan, ternyata eksekusi ke Presenter untuk mengambil dan memproses data apa pun yang diperlukan untuk tampilan tersebut. Presenter tidak boleh melakukan manipulasi data apapun namun dapat berisi panggilan database dan operasi pengambilan atau persiapan lainnya yang diperlukan untuk menghasilkan data View.
 
 ```php
 <?php
@@ -15,3 +17,4 @@ class Presenter extends \O2System\Framework\Http\Presenter
     }
 }
 ```
+

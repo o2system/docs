@@ -38,7 +38,7 @@ $addresses->trace('...', '...');
 
 ```html
 <form action="<?=base_url('login/authenticate');?>" method="post">
-<input type="hidden" name="csrf-token" value="{{$csrfToken}}">
+<input type="hidden" name="csrf-token" value="{{ $csrfToken }}">
 </form>
 ```
 
