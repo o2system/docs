@@ -5,7 +5,7 @@ Helper array file berisi beberapa fungsi untuk membantu mengerjakan/manipulasi a
 
 ## Loading Helper Array
 
-Helper Array dapat di load dengan peritah berikut ini.
+Helper Array dapat di load dengan perintah berikut ini.
 
 ```php
 $this->load->helper('array');
@@ -31,9 +31,9 @@ array_get_value($key, $arr);
 ### array_get_values
 
 ```php
-$arr = array('biru' => 'Blue', 'kuning' => 'Yellow', 'hitam' => 'Black');
+$colors = array('biru' => 'Blue', 'kuning' => 'Yellow', 'hitam' => 'Black');
 $key = array('biru', 'kuning' );
-array_get_values($key, $arr);
+array_get_values($key, $colors);
 
 // Array
 // (
