@@ -1,7 +1,7 @@
 #### Pengantar
 * [Fundamental](introduction/fundamental)
-* Arsitektur
-* Direktori
+* [Arsitektur](introduction/architecture)
+* [Direktori](introduction/directory)
 
 #### Tutorial Dasar
 * [Membuat Halaman Statis](tutorial/create-static-page)
