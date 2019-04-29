@@ -18,192 +18,127 @@ Berikut ini merupakan beberapa helper Security yang tersedia.
 
 #### strip_image_tags
 
+Fungsi ini merupakan sebuah method security untuk menghapus tag image pada sebuah string dan menyisahkan url gambar sebagai teks biasa.
+
 ```php
-strip_image_tags($source_code)
-// 
+$source_code = '<img src="https://example.com/image.png">';
+
+strip_image_tags($source_code);
+
+// https://example.com/image.png
+
 ```
 
 #### strip_cdata
 
+Mengeluarkan semua enkapsulasi CDATA dari string kode sumber HTML.
+
 ```php
-strip_cdata($source_code)
-// 
+$source_code = '<script type="text/javascript">
+    //<![CDATA[
+    var l=new Array();
+    
+    //]]>
+</script>';
+strip_cdata($source_code);
+
+// <script type="text/javascript">
+//     //
+//     var l=new Array();
+    
+//     //
+// </script> 
 ```
 
 
 #### strips_all_tags
 
+Mengeluarkan semua tag HTML dari string kode sumber HTML tetapi tetap menjaga konten aslinya.
+
 ```php
-strips_all_tags($source_code)
-// 
+$source_code = "Strip all HTML tags from string of HTML <code>source code</code> but keep safe the <strong>original</strong> content.</p>";
+strips_all_tags($source_code);
+
+// Strip all HTML tags from string of HTML source code but keep safe the original content.
+
 ```
 
 #### strips_tags
 
+Mengeluarkan semua tag HTML dan kontennya pada konten tag yang di didefiniskan. Menhapus semua konten apapun yang memiliki tag pembuka dan penutup, seperti `<table> <object>` dll.
+
 ```php
-strips_tags($source_code, $disallowed_tags = 'script|style|noframes|select|option', $allowed_tags = '')
-// 
+$source_code = "
+"<script src=\"scripts/app.js\"></script>
+<h1>Hallo</h1>
+";
+strips_tags($source_code, $disallowed_tags = 'script|style|noframes|select|option', $allowed_tags = '');
+
+// Hallo 
 ```
 
 #### strip_word_doc
 
+Membuang semua tag kata doc dari string kode sumber.
+
 ```php
+$source_code = "";
 strip_word_doc($source_code, $allowed_tags = '')
 // 
 ```
 
 #### strip_slashes_recursive
 
+Menhapus semua garis miring terbalik.
+
 ```php
+$string = "\\ \ Who are you\ ";
 strip_slashes_recursive($string)
-// 
+
+// Who are you 
 ```
 
 
 #### strip_comments
 
+Memghapus semua komentar html.
+
 ```php
+$source_code ="<!--- this comment --->
+<p>this paragraf</p>";
 strip_comments($source_code)
-// 
+
+//  <p>this paragraf</p>
 ```
 
 #### clean_white_space
+
+Menghapus karakter spasi dari sebuah string yang terkandung.
+
 ```php
-clean_white_space($source_code)
-// 
+$source_code = "Hello &nbsp; \n \r World";
+clean_white_space($source_code);
+
+// Hello World
 ```
 
 #### encode_php_tags
+
+Menyadikan tag kode PHP ke dalam entitas.
+
 ```php
+$string = "";
 encode_php_tags($string)
-// 
+// &lt;?= echo('Hello world') ?&gt;
 ```
 
 #### escape_html
-```php
-escape_html($source_code, $encoding = 'UTF-8', $double_encode = true)
-// 
-```
-### String
 
-#### str_echo
+Memgembalikan semua tag HTML menjadi variable.
 
 ```php
-str_echo($string, $prefix = null, $suffix = null, $glue = '')
-// 
-```
+$source_code = "<div>Hello World</div>";
+escape_html($source_code, $encoding = 'UTF-8', $double_encode = true);
 
-#### str_email
-
-```php
-str_email($string)
-// 
-```
-
-#### str_alphanumeric
-
-```php
-str_alphanumeric($string)
-// 
-```
-
-#### str_numeric
-
-```php
-str_numeric($string)
-// 
-```
-
-#### str_truncate
-
-```php
-str_truncate($string, $limit = 25, $ending = '')
-// 
-```
-
-#### str_shorten
-
-```php
-str_shorten($string, $limit = 25)
-// 
-```
-
-#### str_obfuscate
-
-```php
-str_obfuscate($string)
-// 
-```
-
-#### str_symbol_to_entities
-
-```php
-str_symbol_to_entities($string)
-// 
-```
-
-#### str_strip_slashes
-
-```php
-str_strip_slashes($string)
-// 
-```
-
-#### str_quote_strip
-
-```php
-str_quote_strip($str)
-// 
-```
-
-#### str_filter_char
-
-
-```php
-str_quote_to_entities($string)
-// 
-```
-
-#### str_rand
-
-```php
-str_rand($type = 'alnum', $length = 8)
-// 
-```
-
-
-#### str_inc
-
-```php
-
-// 
-```
-
-#### str_alt
-
-```php
-
-// 
-```
-
-#### str_char_to_ascii
-
-
-```php
-
-// 
-```
-
-#### str_entities_to_ascii
-
-```php
-
-// 
-```
-
-#### str_ascii_to_entities
-
-```php
-
-// 
+// &lt;div&gt;Hallo, world&lt;/div&gt; 
 ```
