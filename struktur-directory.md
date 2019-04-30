@@ -68,7 +68,7 @@ Seperti yang terlihat pada gambar diatas, struktur pada direktori app memiliki b
 
 ## Direktori Config
 
-Tempat menyimpan semua file-file konfigurasi aplikasi anda. File Config diharuskan ber-format file PHP, yang berisikan variable bertipe array atau bertipe object dari class O2System\Kernel\Datastructures\Config, berlaku untuk turunannya. Penamaan nama variable harus ber-format camelcase dari nama filename Config tersebut, sedangkan untuk penulisan nama filename harus berstandar PSR-4 yaitu dengan format penulisan StudlyCase.
+Tempat menyimpan semua file-file konfigurasi aplikasi anda. File Config diharuskan ber-format file PHP, yang berisikan variable bertipe array atau bertipe object dari class O2System\Kernel\DataStructures\Config, berlaku untuk turunannya. Penamaan nama variable harus ber-format camelcase dari nama filename Config tersebut, sedangkan untuk penulisan nama filename harus berstandar PSR-4 yaitu dengan format penulisan StudlyCase.
 
 ```php
 <?php
@@ -89,9 +89,9 @@ $yourConfig = [
  *
  * Configuration example.
  *
- * @var \O2System\Kernel\Datastructures\Config
+ * @var \O2System\Kernel\DataStructures\Config
  */
-$yourConfig = new \O2System\Kernel\Datastructures\Config([
+$yourConfig = new \O2System\Kernel\DataStructures\Config([
     'key' => 'value'
 ]);
 ```

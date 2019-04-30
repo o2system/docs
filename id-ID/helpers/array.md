@@ -7,8 +7,8 @@ Helper array file berisi beberapa fungsi untuk membantu mengerjakan/manipulasi a
 
 Helper Array dapat di load dengan perintah berikut ini.
 
-```php
-$this->load->helper('array');
+```
+$this->load->helper('Array');
 ```
 
 ## Fungsi yang tersedia
@@ -17,12 +17,11 @@ $this->load->helper('array');
 
 Menentukan nilai dari sebuah array dari indeks tertentu.
 
+> Filename
 ```php
 $arr = array('biru' => 'Blue', 'kuning' => 'Yellow');
 $key = 'biru';
 array_get_value($key, $arr);
-
-// Blue
 ```
 
 ### array_get_values

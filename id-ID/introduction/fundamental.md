@@ -1,4 +1,4 @@
-# fundamental
+# Fundamental
 
 O2System Framework merupakan sebuah php framework generasi masa depan yang dirancang untuk dapat dengan mudah beradaptasi dengan mudah dalam pengembangan aplikasi berskala kecil hingga besar. Oleh karena itu mengetahui dasar-dasar yang terdapat dalam O2System Framework menjadi sangat penting agar kita mengerti apa yang menjadi perbedaan-perbedaan dengan framework php lainnya.
 
