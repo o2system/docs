@@ -1,6 +1,6 @@
 # Array
 
-Helper array file berisi beberapa fungsi untuk membantu mengerjakan/manipulasi array dengan mudah.
+Helper array file berisi beberapa fungsi untuk membantu mengerjakan/memanipulasi array dengan mudah.
 
 
 ## Loading Helper Array

@@ -2,7 +2,9 @@
 * [Fundamental](introduction/fundamental)
 * [Arsitektur](introduction/architecture)
 * [Direktori](introduction/directory)
-
+#### Permulaan
+* [Instalasi](getting-started/instalation)
+* [Konfigurasi](getting-started/configuration)
 #### Tutorial Dasar
 * [Membuat Halaman Statis](tutorial/create-static-page)
 * [Bekerja dengan Controller](tutorial/work-with-controller)
@@ -68,7 +70,7 @@
 
 #### ORM
 * [Overview](orm/overview)
-* [Relationships](orm/realtionships)
+* [Relationships](orm/relationships)
 * [Visibility](orm/visibility)
 * [Factory](orm/factory)
 * [Mutators](orm/mutators)
