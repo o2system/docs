@@ -1,52 +1,44 @@
 # Helpers
 
-## Introduction
+## Pengenalan
 
-Helpers merupakan sekumpulan function-function yang dibuat untuk
-membantu memberikan kemudahan dalam pengembangan aplikasi yang
-dikelompokkan dalam satu file sesuai dengan kategori dan peruntukkannya.
-Helpers tidak ditulis dalam format Object Oriented atau berupa Class
-melainkan dalam bentuk yang sederhana yaitu sebagai function yang
-sifatnya prosedural. Setiap helper function dibuat untuk membantu satu
-dan dapat btanpa ketergantungan pada fungsi helper lainnya.
+Helpers merupakan sekumpulan fungsi yang dibuat untuk membantu memberikan kemudahan dalam pengembangan aplikasi yang dikelompokkan dalam satu file sesuai dengan kategori dan peruntukkannya.
 
-## Directory Location
+Helpers tidak ditulis dalam format Object Oriented atau berupa Class melainkan dalam bentuk yang sederhana yaitu sebagai function yang sifatnya prosedural. Setiap helper function dibuat untuk membantu satu dan dapat tanpa ketergantungan pada fungsi helper lainnya.
 
-Seluruh file Helper harus ditempatkan di dalam direktori khusus dengan
-nama direktor Helpers. Direktori Helpers dapat ditempatkan pada
-direktori utama aplikasi anda ataupun oleh module-module dari aplikasi
-anda.
+## Lokasi Direktori
 
-## Available Helpers
+Seluruh file Helper harus ditempatkan di dalam direktori khusus dengan nama direktor Helpers. Direktori Helpers dapat ditempatkan pada direktori utama aplikasi anda ataupun oleh modul-modul dari aplikasi anda.
+
+## Helper yang tersedia
 
 Secara default O2System Framework sudah menyediakan beberapa Helpers.
+
 Berikut adalah daftar file-file helper yang sudah tersedia:
 
 
 - Kernel Helpers
-  - Common Helper
-  - Cookie Helper
-  - Inflector Helper
-  - Kernel Helper
+  - [Common Helper](/docs/helpers/common)
+  - [Cookie Helper](/docs/helpers/cookie)
+  - [Inflector Helper](/docs/helpers/inflector)
+  - [Kernel Helper]()
   
 - Framework Helpers
-  - Array Helper
-  - Datetime Helper
-  - Framework Helper
-  - Html Helper
-  - Number Helpe
-  - Security Helper
-  - String Helper
-  - Text Helper
-  - Url Helper
+  - [Array Helper](/docs/helpers/array)
+  - [Datetime Helper](/docs/helpers/datetime)
+  - [Framework Helper](/docs/helpers/framework)
+  - [Html Helper](/docs/helpers/html)
+  - [Number Helper](/docs/helpers/number)
+  - [Security Helper](/docs/helpers/security)
+  - [String Helper](/docs/helpers/string)
+  - [Text Helper](/docs/helpers/text)
+  - [Url Helper](/docs/helpers/url)
   
 ## Extending Helpers
 
-Perluasan bertujuan untuk menambahkan function-function baru dari yang
-sudah tersedia di O2System Framework, untuk melakukan perluasan dari
-helper-helper yang sudah tersedia di O2System Framework sangatlah mudah.
-Anda cukup memberi nama file helper extension anda dengan nama yang sama
-dengan nama helper O2System Framework yang ingin anda perluas dan
+Perluasan bertujuan untuk menambahkan function-function baru dari yang sudah tersedia di O2System Framework, untuk melakukan perluasan dari helper-helper yang sudah tersedia di O2System Framework sangatlah mudah.
+
+Anda cukup memberi nama file helper extension anda dengan nama yang sama dengan nama helper O2System Framework yang ingin anda perluas dan
 menyimpannya dalam direktori aplikasi / module anda:
 
 ```
@@ -55,18 +47,10 @@ app/Helpers/HelperName.php
 
 ## Adding Helpers
 
-Selain memperluas helper yang sudah ada, anda juga dapat menambahkan
-helper-helper baru dengan cara membuat sendiri helper yang dibutuhkan
-oleh aplikasi anda. Nama helper tersebut dapat anda tentukan sendiri,
-yang perlu anda perhatikan adalah cara penulisan nama file helper
-tersebut harus sesuai dengan standar PSR-0 dan penulisan code helper
-tersebut harus sesuai dengan standar PSR-1 dan PSR-2. Hal terakhir yang
-perlu anda perhatikan adalah anda harus menyimpan file helper baru anda
-kedalam folder Helpers dari aplikasi / module anda.
+Selain memperluas helper yang sudah ada, anda juga dapat menambahkan helper-helper baru dengan cara membuat sendiri helper yang dibutuhkan oleh aplikasi anda. Nama helper tersebut dapat anda tentukan sendiri, yang perlu anda perhatikan adalah cara penulisan nama file helper tersebut harus sesuai dengan standar PSR-0 dan penulisan code helper tersebut harus sesuai dengan standar PSR-1 dan PSR-2. Hal terakhir yang perlu anda perhatikan adalah anda harus menyimpan file helper baru anda kedalam folder Helpers dari aplikasi / module anda.
 
 
-Cara termudah membuat helper pertama kali adalah melalui O2System
-Console, dengan perintah:
+Cara termudah membuat helper pertama kali adalah melalui O2System Console, dengan perintah:
 
 ```bash
 php o2system make:helper --name=HelperName
@@ -74,32 +58,13 @@ php o2system make:helper --name=HelperName
 
 Option-option yang tersedia lainnya adalah:
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Option</th>
-            <th>Shortcut</th>
-            <th>Terms</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>--name</td>
-            <td>-n</td>
-            <td><span class="badge badge-warning">required</span></td>
-            <td>Menentukan nama dari Helper</td>
-        </tr>
-        <tr>
-            <td>--path</td>
-            <td>-p</td>
-            <td><span class="badge badge-info">optional</span></td>
-            <td>Menentukan penempatan di direktori lain, selain direktori default, yaitu<code>app/Helpers/</code></td>
-        </tr>
-    </tbody>
 
-</table>
-<p>
+
+|Opsi   |pintasan   |Term   |Deskripsi
+|-------|-----------|-------|-------|
+|--name   |-n   |required   |Menentukan nama dari Helper   |
+|--path|-p|optional|Menentukan penempatan di direktori lain, selain direktori default, yaitu `app/Helpers/`
+
 
 
 Berikut ini adalah contoh penulisan source code helper:
@@ -147,9 +112,6 @@ Helpers tidak dimuat secara default, ada beberapa cara yang dapat dilakukan keti
 
     `loader()->helpers(['HelperName','OtherHelperName']);`
     
-Penting untuk anda perhatikan bahwa melakukan helper loading hanya pada
-saat diperlukan membuat aplikasi anda menjadi lebih ringan karena anda
-menggunakan memori dengan sangat optimal. Jadi lakukanlah helper loading
-hanya pada saat helper tersebut diperlukan saja.
+Penting untuk anda perhatikan bahwa melakukan helper loading hanya pada saat diperlukan membuat aplikasi anda menjadi lebih ringan karena anda menggunakan memori dengan sangat optimal. Jadi lakukanlah helper loading hanya pada saat helper tersebut diperlukan saja.
 
 

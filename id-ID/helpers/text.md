@@ -1,7 +1,7 @@
 
 ### Text
 
-Helper Text berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/memanipulasi Text.
+Helper Text berisi beberapa fungsi yang memunngkinkan anda untuk mengatur/memanipulasi teks.
 
 ## Loading Helper Text
 

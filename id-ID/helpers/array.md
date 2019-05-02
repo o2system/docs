@@ -7,7 +7,7 @@ Helper array file berisi beberapa fungsi untuk membantu mengerjakan/memanipulasi
 
 Helper Array dapat di load dengan perintah berikut ini.
 
-```
+```php
 $this->load->helper('Array');
 ```
 

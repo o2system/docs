@@ -181,3 +181,29 @@ class Supplier extends Model
 ```
 
 Argumen pertama yang di diteruskan ke motode `hasOneThrough` adalah nama model akhir yang ingin kita akses. sendangkan argumen kedua adalah nama model perantara.
+
+### Self Referencing Relationship
+
+Terkadang kita membutuhkan sebuah model berelasi ke dirinya sendiri. Contohya relasi antara
+departemen dan sub departement. Keduanya merupakan model departement.
+
+Untuk membuat relasi seperti ini, kita harus menambah field khusus misalnya `id_parent` yang akan digunakan untuk menentukan department dan sub department.
+
+Kita juga harus menggunakan relasi `belongsTo` (untuk menentukan department) dan hasMany (untuk
+menentukan sub department). Tentunya, kita juga pada kedua method ini, kita harus menambah field `id_parent` sebagai custom foreign key.
+
+Hasil akhir modelnya akan seperti berikut:
+
+```php
+class Department extends Model {
+
+public function parent()
+{
+    return $this->belongsTo('App\Models\Department', 'id_parent');
+}
+public function childs()
+{
+    return $this->hasMany('App\Models\Department', 'id_partment');
+}
+}
+```

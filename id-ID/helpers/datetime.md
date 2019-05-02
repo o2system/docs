@@ -191,12 +191,12 @@ calculate_days($start_date, $end_date, $hour = '12:00:00 am');
 
 ### calculate_weeks
 
-Fungsi untuk menghitung rentang minggu.
+Fungsi untuk menghitung rentang waktu minggu.
 
 ```php
 $start_date = '01-12-2000';
 $end_date = '21-12-2001';
-```php
+
 
 calculate_weeks($start_date, $end_date, $hour = '12:00:00 am')
 

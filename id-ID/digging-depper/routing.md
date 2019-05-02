@@ -81,6 +81,3 @@ return '<h1>halaman kontak</h1>';
 <input type="hidden" name="csrf-token" value="{{ $csrfToken }}">
 </form>
 ```
-
-## Redirect Routes
-
