@@ -18,7 +18,15 @@ PSR-11|[Container Interface](http://www.php-fig.org/psr/psr-11/)
 PSR-15|[HTTP Server Request Handlers](http://www.php-fig.org/psr/psr-15/)
 PSR-16|[Common Interface for Caching Libraries](http://www.php-fig.org/psr/psr-16/)
 
-O2System PSR juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpulan dari abstract class php yang bertujuan untuk menjadi rancangan standar dari struktur kode-kode pada O2System Framework serta aplikasi yang akan dibuat. Berikut daftar dari PHP Pattern Classes yang ada pada O2System Framework:
+## Bergantung Pada Standard PHP Library (SPL)
+
+O2System SPL yang juga menjadi salah satu fondasi penting dari O2System Framework dibuat bergantung kepada Standard PHP Library (SPL) serta dibuat dengan mengimplementasikan interface-interface dari SPL.
+
+Beberapa programmer php mungkin belum pernah mendengar tentang keberadaan Standard PHP Library (SPL). SPL adalah koleksi dari dari interface-interface dan class-class php yang dibuat untuk memecahkan masalah umum . SPL menyediakan seperangkat standar datastructure, satu set iterator untuk melintasi objek, satu set interface, seperangkat standar Exception, sejumlah kelas untuk bekerja dengan file dan menyediakan seperangkat fungsi seperti spl_autoload_register yang dipergunakan oleh Composer dan O2System Framework Autoloader.
+
+SPL mulai diperkenalkan sejak versi php 5.0 diluncurkan dan menjadi paket default dari php sejak saat itu. SPL bukanlah library external ataupun extension external melainkan tersedia dan dikompilasi didalam paket php.
+
+O2System SPL juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpulan dari abstract class php yang bertujuan untuk menjadi rancangan standar dari struktur kode-kode pada O2System Framework serta aplikasi yang akan dibuat. Berikut daftar dari PHP Pattern Classes yang ada pada O2System Framework:
 
 - Parent-Child Pattern Class
 - Data Storage Pattern Class
@@ -32,23 +40,17 @@ O2System PSR juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpula
 - Subject Pattern Class
 - Variable Storage Pattern Class
 
-## Bergantung Pada Standard PHP Library (SPL)
-
-O2System SPL yang juga menjadi salah satu fondasi penting dari O2System Framework dibuat bergantung kepada Standard PHP Library (SPL) serta dibuat dengan mengimplementasikan interface-interface dari SPL.
-
-Beberapa programmer php mungkin belum pernah mendengar tentang keberadaan Standard PHP Library (SPL). SPL adalah koleksi dari dari interface-interface dan class-class php yang dibuat untuk memecahkan masalah umum . SPL menyediakan seperangkat standar datastructure, satu set iterator untuk melintasi objek, satu set interface, seperangkat standar Exception, sejumlah kelas untuk bekerja dengan file dan menyediakan seperangkat fungsi seperti spl_autoload_register yang dipergunakan oleh Composer dan O2System Framework Autoloader.
-
-SPL mulai diperkenalkan sejak versi php 5.0 diluncurkan dan menjadi paket default dari php sejak saat itu. SPL bukanlah library external ataupun extension external melainkan tersedia dan dikompilasi didalam paket php.
-
 ## Dilengkapi dengan Fasilitas Developer
 
-Beberapa kesulitan dari para php programmer adalah ketika harus melakukan proses testing, debugging dan profilling. Namun di O2System Framework sudah terdapat O2System Gear yang menyediakan seperangkat fungsi dan seperangkat library class untuk melakukan unit testing, debugging dan profilling. Berikut ini adalah daftar dari beberapa fitur yang sudah tersedia:
+Beberapa kesulitan dari para php programmer adalah ketika harus melakukan proses testing, debugging dan profilling. O2System Framework sudah diperlengkapi dengan O2System Gear yang menyediakan seperangkat fungsi dan seperangkat library class untuk melakukan unit testing, debugging dan profilling. Berikut ini adalah daftar dari beberapa fitur yang sudah tersedia:
 
 - Browser Debugging Toolbar
 - Debugging Class with Helper
 - Profiler Class
 - Unit Testing Class
 - Browser and Command Line Interface (CLI) Print-Out
+
+> Anda dapat mempelajari lebih dalam di penjelasan mengenai O2System Gear pada link berikut.
 
 ## Kernel Sebagai Core Framework
 
@@ -65,7 +67,7 @@ Tipe kernel dari O2System Framework bisa dimasukkan dalam kategori Hybrid (atau 
 
 ## Pola Desain Singleton
 
-Didalam dunia software engineering singleton pattern adalah sebuah rancangan kode program dimana instantiasi kelas dibatasi hanya dalam satu objek. Didalam O2System Framework hanya diperbolehkan satu instance sistem core oleh karena itu desain singleton pattern inilah yang diterapkan.
+Didalam dunia software engineering singleton pattern adalah sebuah rancangan kode program dimana instantiasi kelas dibatasi hanya dalam satu objek. O2System Framework hanya memperbolehkan satu instance sistem core oleh karena itu desain singleton pattern inilah yang diterapkan.
 
 Fungsi dari instance sistem tersebut adalah untuk mengkoordinasikan seluruh tindakan-tindakan dan service-service yang terjadi di dalam sistem dan aplikasi menjadi satu kesatuan sistem. Hal ini menjadikan sistem dapat beroperasi dengan sangat effisien dalam penggunaan memori yang juga menyediakan status global didalamnya. Instance ini sering disebut juga dengan istilah Super Global Instance.
 

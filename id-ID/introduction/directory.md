@@ -9,52 +9,155 @@ Setiap project yang menggunakan O2System Framework memiliki 5 struktur direktori
 4. Direktori Storage
 5. Direktori Vendor
 
-```
-├── app
-│   ├── Api
-│   ├── app.json
-│   ├── Cms
-│   ├── Config
-│   ├── Controllers
-│   ├── Helpers
-│   ├── Http
-│   ├── Languages
-│   ├── Libraries
-│   ├── Models
-│   ├── Modules
-│   ├── Pages
-│   ├── Presenters
-│   ├── Site
-│   ├── Views
-│   └── Widgets
-├── cache
-│   ├── images
-│   ├── output
-│   ├── registry
-│   └── sessions
-├── cli.php
-├── composer.json
-├── composer.lock
-├── LICENSE
-├── o2system
-├── package.json
-├── package-lock.json
-├── public
-├── README.md
-├── resources
-    ├── app.js
-    ├── app.scss
-    ├── cms
-    ├── config
-    ├── modules
-    ├── pages
-    ├── themes
-    └── views
-├── server.php
-├── storage
-└── vendor
+<ul class="file-tree">
+    <li>
+        <a href="#">app</a>
+        <ul>
+            <li>
+                <a href="#">Config</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Controllers</a>
+               <ul>
+                   <li>
+                       <a href="#">.gitkeep</a>
+                   </li>
+               </ul>
+            </li>
+            <li>
+                <a href="#">Helpers</a>
+                <ul></ul>
+            </li>
+            <li>
+                <a href="#">Http</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Languages</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Libraries</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Models</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Modules</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Presenters</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Widgets</a>
+                <ul>
+                    <li>
+                        <a href="#">.gitkeep</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">app.json</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">cache</a>
+        <ul>
+            <li>
+                <a href="#">.gitkeep</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">database</a>
+        <ul>
+            <li>
+                <a href="#">.gitkeep</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">node_modules</a>
+        <ul>
+        </ul>
+    </li>
+    <li>
+        <a href="#">public</a>
+        <ul></ul>
+    </li>
+    <li>
+        <a href="#">resources</a>
+        <ul></ul>
+    </li>
+    <li>
+        <a href="#">storage</a>
+        <ul></ul>
+    </li>
+    <li>
+        <a href="#">vendor</a>
+        <ul></ul>
+    </li>
+    <li>
+        <a href="#">cli.php</a>
+    </li>
+    <li>
+        <a href="#">composer.json</a>
+    </li>
+    <li>
+        <a href="#">LICENSE</a>
+    </li>
+    <li>
+        <a href="#">o2system</a>
+    </li>
+    <li>
+        <a href="#">package.json</a>
+    </li>
+    <li>
+        <a href="#">package-lock.json</a>
+    </li>
+    <li>
+        <a href="#">README.md</a>
+    </li>
+    <li>
+        <a href="#">server.php</a>
+    </li>
+</ul>
 
-```
+
 Masing-masing direktori tersebut memiliki peruntukannya masing-masing.
 
 ## Direktori App
@@ -183,12 +286,17 @@ HELLO_WORLD = "Hello World"
 > Disimpan dengan tambahan suffix bahasa
 `app/Languages/nama-file_en-US.ini`
 
+```ini
 ;; Example INI Language file id-ID
 HELLO_WORLD = "Halo Dunia"
-Disimpan didalam sub-direktori berdasarkan bahasa
+```
+
+> Disimpan didalam sub-direktori berdasarkan bahasa
 app/Languages/id-ID/nama-file.ini
-Disimpan dengan tambahan suffix bahasa
+
+> Disimpan dengan tambahan suffix bahasa
 app/Languages/nama-file_id-ID.ini
+
 Hal terpenting pertama dalam penulisan file Language adalah language key parameter harus dituliskan dengan format CAPSLOCK dan menggunakan underscore (_) sebagai pemisah kata. Hal terpenting kedua yaitu language key parameter pada setiap bahasa tidak boleh berubah seperti pada contoh diatas.
 
 > Tips and Trick

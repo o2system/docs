@@ -180,12 +180,17 @@ HELLO_WORLD = "Hello World"
 > Disimpan dengan tambahan suffix bahasa
 `app/Languages/nama-file_en-US.ini`
 
+```ini
 ;; Example INI Language file id-ID
 HELLO_WORLD = "Halo Dunia"
-Disimpan didalam sub-direktori berdasarkan bahasa
+```
+
+> Disimpan didalam sub-direktori berdasarkan bahasa
 app/Languages/id-ID/nama-file.ini
-Disimpan dengan tambahan suffix bahasa
+
+> Disimpan dengan tambahan suffix bahasa
 app/Languages/nama-file_id-ID.ini
+
 Hal terpenting pertama dalam penulisan file Language adalah language key parameter harus dituliskan dengan format CAPSLOCK dan menggunakan underscore (_) sebagai pemisah kata. Hal terpenting kedua yaitu language key parameter pada setiap bahasa tidak boleh berubah seperti pada contoh diatas.
 
 > Tips and Trick
