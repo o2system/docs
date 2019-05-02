@@ -1,6 +1,6 @@
 # Array
 
-Helper array file berisi beberapa fungsi untuk membantu mengerjakan/manipulasi array dengan mudah.
+Helper array file berisi beberapa fungsi untuk membantu mengerjakan/memanipulasi array dengan mudah.
 
 
 ## Loading Helper Array
@@ -146,3 +146,4 @@ range_year($min, $max, $step)
 //     [2018] => 2018
 // )
 ```
+90013089425
