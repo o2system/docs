@@ -5,44 +5,20 @@
 
 Untuk mulai bekerja dengan O2System Framework anda harus memastikan server anda telah memenuhi persyaratan minimum berikut:
 
-### HTTP Server
-
-#### Apache
-
-- [Module Rewrite (mod_rewrite)](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
-- [Module Header (mod_header)](https://httpd.apache.org/docs/2.4/mod/mod_headers.html)
-
-#### NGINX
-
-- [PHP FPM](https://php-fpm.org/)
-
-#### Microsoft IIS
-
-- [PHP Fast-CGI](https://www.php.net/manual/en/install.fpm.php)
-- [Rewrite Rule](https://www.iis.net/downloads/microsoft/url-rewrite)
-
-### Supported PHP Versions
-
-- PHP v5.6.0+ (Nearly Deprecated)
-- PHP v7.1+ (Strongly Recommended - Why v7.1?)
-
-> Untuk performa lebih baik, disarankan menggunakan PHP v7.1+
-
-### PHP Extensionsls 
-
-- [Fileinfo]()
-- [Mcrypt]()
-- [OpenSSL](https://www.php.net/manual/en/book.openssl.php)
-- [Mbstring](https://www.php.net/manual/en/install.php)
-- [Tokenizer]()
-- [XML]()
-- [APCu]() & [Zend OPCache]
+- PHP >= 7.2
+- Fileinfo
+- Mcrypt
+- OpenSSL
+- Mbstring
+- Tokenizer
+- XML
+- APCu & Zend OPCache
 
 ## Instalasi
 
 ### Instalasi via Composer
 
-O2System Framework telah menggunakan [Composer](https://getcomposer.org/download/) sebagai Dependency Management, jadi langkah termudah untuk melakukan instalasi adalah dengan menggunakan perintah  berikut ini:
+O2System Framework menggunakan [Composer](https://getcomposer.org/download/) sebagai Dependency Management, jadi langkah termudah untuk melakukan instalasi adalah dengan menggunakan perintah  berikut ini:
 
 ```bash
 composer create-project o2system/o2system [project-name]
@@ -62,13 +38,13 @@ php o2system serve
 ### Direktori public
 
 
-Setelah pemasangan O2ystem selesai, Anda harus memastikan bahwa konfigurasi web server/webroot mengarah ke direktori `public`. file `index.php` pada direktori tersebut merupakan front controller/bootstraping daroi all HTTP request.
+Setelah pemasangan O2ystem selesai, Anda harus memastikan bahwa konfigurasi web server/webroot mengarah ke direktori `public`. file `index.php` pada direktori tersebut merupakan front controller/bootstraping dari semua request HTTP.
 
 ### File Konfigurasi
 
-Semua file configurasi O2system terletak di direktori app/Config. semua pilihan kofigurasi telah terdokumentasi dengan baik di dalam file tersebut. Anda bisa mencoba beberapa konfigurasi yang di perlukan.
+Semua file konfigurasi O2system terletak di direktori app/Config. semua pilihan kofigurasi telah terdokumentasi dengan baik di dalam file tersebut. Anda bisa mencoba beberapa konfigurasi yang di perlukan.
 
-### permission diretori
+### diretori permisi
 
 Setelah selesai melakukan instalasi O2System Framework anda wajib memastikan bahwa direktori `cache` dan `storage` dapat ditulis oleh aplikasi anda.
 

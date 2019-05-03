@@ -42,7 +42,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
 
 - **Images Controller**
 
-    Controller ini secara default diperuntukkan untuk mengakses file-file image dalam direktori storage images dan sekaligus sebagai penyedia service image manipulation on-the-fly.
+    Controller ini secara default diperuntukkan untuk mengakses file-file image dalam direktori storage images dan sekaligus sebagai penyedia *service image manipulation on-the-fly*.
     
 - **Pages Controller**
     
@@ -50,7 +50,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
     
 - **Restful Controller**
     
-    Controller ini secara default adalah Base Controller apabila anda ingin membangun restful web service.
+    Controller ini secara default adalah Base Controller apabila anda ingin membangun *restful web service*.
     
 - **Storage Controller**
     
@@ -58,7 +58,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
     
 - **Websocket Controller**
     
-    Controller ini secara default adalah Base Controller apabila anda ingin membangun websocket web service.
+    Controller ini secara default adalah Base Controller apabila anda ingin membangun *websocket web service*.
     
 
 ## Controller Methods

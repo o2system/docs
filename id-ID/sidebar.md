@@ -3,10 +3,6 @@
 * [Arsitektur](/docs/introduction/architecture)
 * [Direktori](/docs/introduction/directory)
 
-#### Permulaan
-* [Konfigurasi](/docs/getting-started/configuration)
-* [Instalasi](/docs/getting-started/installation)
-
 #### Tutorial Dasar
 * [Membuat Halaman Statis](/docs/tutorial/create-static-page)
 * [Bekerja dengan Controller](/docs/tutorial/work-with-controller)
