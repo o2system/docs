@@ -8,11 +8,12 @@ Berikut langkah-langkah membuat halaman statis pada O2System Framework, sebagai 
 
 Buatlah sebuah file page dengan ekstensi phtml, simpanlah pada direktori `resources/pages`.
 
+```html
 <h1 class="page-header">About Us</h1>
 <p class="page-content">
     This is about us page.
 </p>
-
+```
 
 Beberapa hal yang harus diperhatikan:
 1. Nama file harus berekstensi phtml

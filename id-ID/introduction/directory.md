@@ -493,11 +493,12 @@ Direktori ini berisikan file-file database seeds yang digenerate oleh O2System p
 
 Direktori publik berfungsi sebagai root document dari web server anda, di mana semua file yang dapat diakses oleh publik akan ditempatkan di direktori ini seperti file javascript, css, gambar dan asset lainnya. Index.php yang berfungsi sebagai front-controller dari permintaan http aplikasi anda terletak di direktori ini. Asset dan tema yang digunakan oleh aplikasi Anda juga terletak di dalam direktori ini.
 
-##  Directory Resources
+##  Direktori Resources
 
 Direktori ini memiliki tiga buah sub direktori yaitu config, themes, dan views. Berikut ini adalah penjelas singkat terkait fungsi dari masing-masing sub direktori tersebut:
 
 ### Config
+
 Folder Config berisi file konfigurasi O2System untuk mengkompilasi  file asset yang berupa sass, dan js(es6) yang ada di folder themes. konfigurasi tersebut menggunakan [nodejs](https://nodejs.org/en/download/)
 
 ### Themes
