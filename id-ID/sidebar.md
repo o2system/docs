@@ -3,6 +3,10 @@
 * [Arsitektur](/docs/introduction/architecture)
 * [Direktori](/docs/introduction/directory)
 
+#### Permulaan
+* [Konfigurasi](/docs/getting-started/configuration)
+* [Instalasi](/docs/getting-started/installation)
+
 #### Tutorial Dasar
 * [Membuat Halaman Statis](/docs/tutorial/create-static-page)
 * [Bekerja dengan Controller](/docs/tutorial/work-with-controller)
@@ -13,16 +17,6 @@
 * [Membuat Bahasa](/docs/tutorial/create-language)
 * [Membuat Library](/docs/tutorial/create-language)
 * [Membuat Helper](/docs/tutorial/create-helper)
-
-#### Frontend
-* [Overview](/docs/frontend/overview)
-* [Membuat Page Mockup](/docs/frontend/create-page-mockup)
-* [Membuat Theme](/docs/frontend/create-theme)
-* [Venus UI](/docs/frontend/venus-ui)
-    * [UI Components](/docs/frontend/venus-ui/ui-component)
-    * [Form Components](/docs/frontend/venus-ui/form-component)
-    * [Admin Theme](/docs/frontend/venus-ui/admin-theme)
-    * [Multipurpose](/docs/frontend/venus-ui/multipourpose)
 
 #### Topik Umum
 * [Coding Style Guide](/docs/general-topic/coding-style-guide)
@@ -173,6 +167,16 @@
 #### PHP Standard Recommendation (PSR)
 * [Overview](/docs/psr/overview)
 * [Design Patterns](/docs/psr/design-patterns)
+
+#### Frontend
+* [Overview](/docs/frontend/overview)
+* [Membuat Page Mockup](/docs/frontend/create-page-mockup)
+* [Membuat Theme](/docs/frontend/create-theme)
+* [Venus UI](/docs/frontend/venus-ui)
+    * [UI Components](/docs/frontend/venus-ui/ui-component)
+    * [Form Components](/docs/frontend/venus-ui/form-component)
+    * [Admin Theme](/docs/frontend/venus-ui/admin-theme)
+    * [Multipurpose](/docs/frontend/venus-ui/multipourpose)
 
 #### Boilerplates
 * [Full Stack](/docs/boilerplates/fullstack)
