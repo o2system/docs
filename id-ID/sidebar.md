@@ -3,6 +3,10 @@
 * [Arsitektur](/docs/introduction/architecture)
 * [Direktori](/docs/introduction/directory)
 
+#### Permulaan
+* [Instalasi](/docs/getting-started/installation)
+* [Komfigurasi](/docs/getting-started/configuration)
+* 
 #### Tutorial Dasar
 * [Membuat Halaman Statis](/docs/tutorial/create-static-page)
 * [Bekerja dengan Controller](/docs/tutorial/work-with-controller)
@@ -14,26 +18,16 @@
 * [Membuat Library](/docs/tutorial/create-language)
 * [Membuat Helper](/docs/tutorial/create-helper)
 
-#### Frontend
-* [Overview](/docs/frontend/overview)
-* [Membuat Page Mockup](/docs/frontend/create-page-mockup)
-* [Membuat Theme](/docs/frontend/create-theme)
-* [Venus UI](/docs/frontend/venus-ui)
-    * [UI Components](/docs/frontend/venus-ui/ui-component)
-    * [Form Components](/docs/frontend/venus-ui/form-component)
-    * [Admin Theme](/docs/frontend/venus-ui/admin-theme)
-    * [Multipurpose](/docs/frontend/venus-ui/multipourpose)
-
 #### Topik Umum
-* [Coding Style Guide](/docs/general-topic/coding-style-guide)
-* [CLI Commands](/docs/general-topic/cli-comands)
-* [Constants](/docs/general-topic/constant)
-* [Error Handling](/docs/general-topic/error-handling)
-* [Extending Framework Core](/docs/general-topic/extending-framwork-core)
-* [Records Sets](/docs/general-topic/record-sets)
-* [Auto-loading Resources](/docs/general-topic/auto-loading-resources)
-* [Managing Your Applications](/docs/general-topic/manage-applications)
-* [Handling Multiple Environments](/docs/general-topic/handling-multiple-enviroments)
+* [Coding Style Guide](/docs/general-topics/coding-style-guide)
+* [CLI Commands](/docs/general-topics/cli-comands)
+* [Constants](/docs/general-topics/constant)
+* [Error Handling](/docs/general-topics/error-handling)
+* [Extending Framework Core](/docs/general-topics/extending-framwork-core)
+* [Records Sets](/docs/general-topics/record-sets)
+* [Auto-loading Resources](/docs/general-topics/autoloading-resources)
+* [Managing Your Applications](/docs/general-topics/manage-applications)
+* [Handling Multiple Environments](/docs/general-topics/handling-multiple-enviroments)
 
 #### Digging Deeper
 * [Page](/docs/digging-depper/page)
@@ -173,6 +167,16 @@
 #### PHP Standard Recommendation (PSR)
 * [Overview](/docs/psr/overview)
 * [Design Patterns](/docs/psr/design-patterns)
+
+#### Frontend
+* [Overview](/docs/frontend/overview)
+* [Membuat Page Mockup](/docs/frontend/create-page-mockup)
+* [Membuat Theme](/docs/frontend/create-theme)
+* [Venus UI](/docs/frontend/venus-ui)
+    * [UI Components](/docs/frontend/venus-ui/ui-component)
+    * [Form Components](/docs/frontend/venus-ui/form-component)
+    * [Admin Theme](/docs/frontend/venus-ui/admin-theme)
+    * [Multipurpose](/docs/frontend/venus-ui/multipourpose)
 
 #### Boilerplates
 * [Full Stack](/docs/boilerplates/fullstack)

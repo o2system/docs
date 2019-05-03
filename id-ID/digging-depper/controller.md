@@ -11,7 +11,7 @@ Dengan pemahaman ini, sebaiknya sebuah controller emang memiliki sedikit kode. S
 
 ## Membuat sebuah Controller
 
-Untuk membuat sebuah comtroller di O2system cukuplah mudah hanya dengan membuat sebuah class di folder `app/Controller`. nama controller sebaiknya di smaakan dnegan model yang di buat.
+Untuk membuat sebuah comtroller di O2system cukuplah mudah hanya dengan membuat sebuah class di folder `app/Controller`. nama controller sebaiknya di samakan dengan model yang di buat.
 
 ```php
 <?php
@@ -27,7 +27,8 @@ class Post extends Controller
     }
 }
 ```
-apablia udah selesai silahkan dicek di browser dengan kesayangan anda dengan mengerikan `php o2system serve`
+
+Apablia udah selesai silahkan dicek di browser dengan kesayangan anda dengan mengetikan `php o2system serve`
 
 ## Directory Location
 
@@ -43,7 +44,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
 
 - **Images Controller**
 
-    Controller ini secara default diperuntukkan untuk mengakses file-file image dalam direktori storage images dan sekaligus sebagai penyedia service image manipulation on-the-fly.
+    Controller ini secara default diperuntukkan untuk mengakses file-file image dalam direktori storage images dan sekaligus sebagai penyedia *service image manipulation on-the-fly*.
     
 - **Pages Controller**
     
@@ -51,7 +52,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
     
 - **Restful Controller**
     
-    Controller ini secara default adalah Base Controller apabila anda ingin membangun restful web service.
+    Controller ini secara default adalah Base Controller apabila anda ingin membangun *restful web service*.
     
 - **Storage Controller**
     
@@ -59,7 +60,7 @@ Berikut ini adalah daftar file-file Controller yang secara default sudah tersedi
     
 - **Websocket Controller**
     
-    Controller ini secara default adalah Base Controller apabila anda ingin membangun websocket web service.
+    Controller ini secara default adalah Base Controller apabila anda ingin membangun *websocket web service*.
     
 
 ## Controller Methods

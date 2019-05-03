@@ -22,6 +22,7 @@ if ( ! defined( 'ENVIRONMENT' ) ) {
     $_ENV[ 'DEBUG_STAGE' ] = 'DEVELOPER';
 }
 ```
+
 ## Laporan Eror
 
 Mengatur konstanta `DEVELOPMENT` ke nilai 'DEVELOPER' akan menghasilkan semua eror pada kode PHP dirender ke browser saat itu terjadi. Sebaliknya, menyetel konstanta ke 'PRODUCTION' akan menonaktifkan semua output eror.
