@@ -1,11 +1,21 @@
 # Middleware
 
-Middleware menyediakan mekanisme untuk memfilter permintaan HTTP memasuki aplikasi Anda. Misalnya, O2System menyertakan middleware yang memverifikasi bahwa pengguna aplikasi Anda diautentikasi. Jika pengguna tidak diautentikasi, middleware akan mengarahkan pengguna ke layar login. Namun, jika pengguna diautentikasi, middleware akan memungkinkan permintaan untuk melanjutkan lebih jauh ke dalam aplikasi.
+Didalam dunia software engineering middleware merupakan sebuah perangkat lunak perantara yang berada diantara kernel dan aplikasi yang salah satu fungsinya adalah sebagai lapisan penyaring permintaan. Pada aplikasi berbasis web middleware middleware merupakan lapisan penyaring permintaan HTTP. 
 
-Middleware tambahan dapat ditulis untuk melakukan berbagai tugas selain otentikasi. Middleware CORS mungkin bertanggung jawab untuk menambahkan tajuk yang tepat untuk semua tanggapan yang meninggalkan aplikasi Anda. Middleware logging mungkin mencatat semua permintaan yang masuk ke aplikasi Anda.
+## Bagaimana Cara Middleware Bekerja?
 
-Ada beberapa middleware yang termasuk dalam kerangka O2System, termasuk middleware untuk otentikasi dan perlindungan CSRF. Semua middleware ini terletak di direktori `app / Http / Middleware`.
+Framework yang berbeda menerapkan middleware secara berbeda. O2System Framework menerapkan middleware sebagai lapisan konsentris. Lapisan middleware yang pertama diterapkan akan menjadi lapisan middleware terluar dan akan dijalankan dengan metode FIFO (First In First Out) dimulai dari lapisan terluar hingga lapisan terdalam.
 
+![Middleware](http://www.slimframework.com/docs/v3/images/middleware.png)
+
+## Lapisan Built-In Middleware
+
+O2System Framework sudah menyertakan beberapa mekanisme middleware, antara lain:
+- Cache Middleware
+- Csrf Middleware
+- Environment Middleware
+- Maintenance Middleware
+- Sign On Middleware
 
 ## Mendefinisikan Middleware
 

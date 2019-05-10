@@ -3,10 +3,6 @@
 * [Arsitektur](/docs/introduction/architecture)
 * [Direktori](/docs/introduction/directory)
 
-#### Permulaan
-* [Instalasi](/docs/getting-started/installation)
-* [Komfigurasi](/docs/getting-started/configuration)
-* 
 #### Tutorial Dasar
 * [Membuat Halaman Statis](/docs/tutorial/create-static-page)
 * [Bekerja dengan Controller](/docs/tutorial/work-with-controller)
@@ -19,15 +15,15 @@
 * [Membuat Helper](/docs/tutorial/create-helper)
 
 #### Topik Umum
-* [Coding Style Guide](/docs/general-topics/coding-style-guide)
-* [CLI Commands](/docs/general-topics/cli-comands)
-* [Constants](/docs/general-topics/constant)
-* [Error Handling](/docs/general-topics/error-handling)
-* [Extending Framework Core](/docs/general-topics/extending-framwork-core)
-* [Records Sets](/docs/general-topics/record-sets)
-* [Auto-loading Resources](/docs/general-topics/autoloading-resources)
-* [Managing Your Applications](/docs/general-topics/manage-applications)
-* [Handling Multiple Environments](/docs/general-topics/handling-multiple-enviroments)
+* [Coding Style Guide](/docs/general-topic/coding-style-guide)
+* [CLI Commands](/docs/general-topic/cli-comands)
+* [Constants](/docs/general-topic/constant)
+* [Error Handling](/docs/general-topic/error-handling)
+* [Extending Framework Core](/docs/general-topic/extending-framwork-core)
+* [Records Sets](/docs/general-topic/record-sets)
+* [Auto-loading Resources](/docs/general-topic/auto-loading-resources)
+* [Managing Your Applications](/docs/general-topic/manage-applications)
+* [Handling Multiple Environments](/docs/general-topic/handling-multiple-enviroments)
 
 #### Digging Deeper
 * [Page](/docs/digging-depper/page)
