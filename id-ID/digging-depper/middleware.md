@@ -1,16 +1,17 @@
 # Middleware
 
-Didalam dunia software engineering middleware merupakan sebuah perangkat lunak perantara yang berada diantara kernel dan aplikasi yang salah satu fungsinya adalah sebagai lapisan penyaring permintaan. Pada aplikasi berbasis web middleware middleware merupakan lapisan penyaring permintaan HTTP. 
+Didalam dunia software engineering middleware merupakan sebuah perangkat lunak perantara yang berada diantara kernel dan aplikasi yang salah satu fungsinya adalah sebagai lapisan penyaring permintaan. Pada aplikasi berbasis web middleware merupakan lapisan penyaring permintaan HTTP. 
 
 ## Bagaimana Cara Middleware Bekerja?
 
-Framework yang berbeda menerapkan middleware secara berbeda. O2System Framework menerapkan middleware sebagai lapisan konsentris. Lapisan middleware yang pertama diterapkan akan menjadi lapisan middleware terluar dan akan dijalankan dengan metode FIFO (First In First Out) dimulai dari lapisan terluar hingga lapisan terdalam.
+Framework yang berbeda menerapkan middleware secara berbeda. O2System Framework menerapkan middleware sebagai lapisan konsentris. Lapisan middleware yang pertama diterapkan akan menjadi lapisan middleware terluar dan akan dijalankan dengan metode FIFO (*First In First Out*) dimulai dari lapisan terluar hingga lapisan terdalam.
 
 ![Middleware](http://www.slimframework.com/docs/v3/images/middleware.png)
 
 ## Lapisan Built-In Middleware
 
 O2System Framework sudah menyertakan beberapa mekanisme middleware, antara lain:
+
 - Cache Middleware
 - Csrf Middleware
 - Environment Middleware
@@ -19,11 +20,13 @@ O2System Framework sudah menyertakan beberapa mekanisme middleware, antara lain:
 
 ## Mendefinisikan Middleware
 
-Untuk membuat middleware baru, gunakan perintah `make: middleware` Artisan:
+Untuk membuat middleware baru, gunakan perintah `php o2system make/middleware`:
 
-    php artisan make: middleware CheckAge
+```bash
+php o2system make/middleware CheckAge
+```
 
-Perintah ini akan menempatkan kelas `CheckAge` baru di dalam direktori` app / Http / Middleware` Anda. Di middleware ini, kami hanya akan mengizinkan akses ke rute jika `usia` yang disediakan lebih besar dari 200. Jika tidak, kami akan mengarahkan pengguna kembali ke URI` rumah`:
+Perintah ini akan menempatkan kelas `CheckAge` baru di dalam direktori` app/Http/Middleware` Anda. Di middleware ini, kami hanya akan mengizinkan akses ke rute jika `age` yang disediakan lebih besar dari 200. Jika tidak, kami akan mengarahkan pengguna kembali ke URI`home`:
 
 ```php
  <?php

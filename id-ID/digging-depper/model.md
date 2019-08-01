@@ -2,16 +2,16 @@
 
 Model merupakan sebuah PHP class yang berperan sebagai sebuah rancangan dari data yang digunakan dalam aplikasi. Model dirancang untuk bekerja dengan informasi dari database.
 
-## Directory Location
+## Lokasi Direktori
 
-Seluruh file Model harus ditempatkan di dalam direktori khusus dengan nama direktor Models. Direktori Models dapat ditempatkan pada direktori utama aplikasi anda ataupun oleh module-module dari aplikasi anda.
+Seluruh file Model harus ditempatkan di dalam direktori khusus dengan nama direktori Models. Direktori Models dapat ditempatkan pada direktori utama aplikasi anda ataupun oleh module-module dari aplikasi anda.
 
 ## Membuat Model
 
 Cara termudah membuat model pertama kali adalah melalui O2System Console, dengan perintah:
 
 ```bash
-php o2system make:model --name=ModelClassName
+php o2system make/model --name=ModelClassName
 ```
 
 Option-option yang tersedia lainnya adalah:
