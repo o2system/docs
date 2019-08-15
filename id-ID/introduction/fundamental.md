@@ -8,7 +8,7 @@ Penulisan kode-kode programming php sangatlah beraneka ragam. Hal ini sangat ber
 O2System PSR adalah salah satu fondasi penting dalam O2System Framework dibuat berdasarkan PHP Standard Recommendations (PSR) yang telah diluncurkan oleh PHP-FIG. Seluruh penulisan kode-kode php dalam O2System Framework dan library-librarynya dibuat sesuai dengan dasar standar koding PSR-1 dan PSR-2. Berikut ini adalah daftar dari PSR yang diterapkan pada O2System Framework:
 
 
-|Based |Title|
+|Base |Judul|
 |--|---|
 PSR-3|[Logger Interface](http://www.php-fig.org/psr/psr-3/)
 PSR-4|[Autoloading Standard](http://www.php-fig.org/psr/psr-4/)
@@ -18,7 +18,15 @@ PSR-11|[Container Interface](http://www.php-fig.org/psr/psr-11/)
 PSR-15|[HTTP Server Request Handlers](http://www.php-fig.org/psr/psr-15/)
 PSR-16|[Common Interface for Caching Libraries](http://www.php-fig.org/psr/psr-16/)
 
-O2System PSR juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpulan dari abstract class php yang bertujuan untuk menjadi rancangan standar dari struktur kode-kode pada O2System Framework serta aplikasi yang akan dibuat. Berikut daftar dari PHP Pattern Classes yang ada pada O2System Framework:
+## Bergantung Pada Standard PHP Library (SPL)
+
+O2System SPL yang juga menjadi salah satu fondasi penting dari O2System Framework dibuat bergantung kepada Standard PHP Library (SPL) serta dibuat dengan mengimplementasikan interface-interface dari SPL.
+
+Beberapa programmer php mungkin belum pernah mendengar tentang keberadaan Standard PHP Library (SPL). SPL adalah koleksi dari dari interface-interface dan class-class php yang dibuat untuk memecahkan masalah umum . SPL menyediakan seperangkat standar datastructure, satu set iterator untuk melintasi objek, satu set interface, seperangkat standar Exception, sejumlah kelas untuk bekerja dengan file dan menyediakan seperangkat fungsi seperti spl_autoload_register yang dipergunakan oleh Composer dan O2System Framework Autoloader.
+
+SPL mulai diperkenalkan sejak versi php 5.0 diluncurkan dan menjadi paket default dari php sejak saat itu. SPL bukanlah library external ataupun extension external melainkan tersedia dan dikompilasi didalam paket php.
+
+O2System SPL juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpulan dari abstract class php yang bertujuan untuk menjadi rancangan standar dari struktur kode-kode pada O2System Framework serta aplikasi yang akan dibuat. Berikut daftar dari PHP Pattern Classes yang ada pada O2System Framework:
 
 - Parent-Child Pattern Class
 - Data Storage Pattern Class
@@ -31,14 +39,6 @@ O2System PSR juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpula
 - Singleton Pattern Class
 - Subject Pattern Class
 - Variable Storage Pattern Class
-
-## Bergantung Pada Standard PHP Library (SPL)
-
-O2System SPL yang juga menjadi salah satu fondasi penting dari O2System Framework dibuat bergantung kepada Standard PHP Library (SPL) serta dibuat dengan mengimplementasikan interface-interface dari SPL.
-
-Beberapa programmer php mungkin belum pernah mendengar tentang keberadaan Standard PHP Library (SPL). SPL adalah koleksi dari dari interface-interface dan class-class php yang dibuat untuk memecahkan masalah umum . SPL menyediakan seperangkat standar datastructure, satu set iterator untuk melintasi objek, satu set interface, seperangkat standar Exception, sejumlah kelas untuk bekerja dengan file dan menyediakan seperangkat fungsi seperti spl_autoload_register yang dipergunakan oleh Composer dan O2System Framework Autoloader.
-
-SPL mulai diperkenalkan sejak versi php 5.0 diluncurkan dan menjadi paket default dari php sejak saat itu. SPL bukanlah library external ataupun extension external melainkan tersedia dan dikompilasi didalam paket php.
 
 ## Dilengkapi dengan Fasilitas Developer
 
