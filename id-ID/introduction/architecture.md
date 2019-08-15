@@ -1,4 +1,6 @@
-Sistem arsitektur adalah sebuah model konseptual yang mendefinisikan struktur dan alur dari sebuah sistem. Representasi dari sebuah sistem terkandung dari arsitektur pemetaan hubungan antara satu komp
+# Arsitektur
+
+Sistem arsitektur adalah sebuah model konseptual yang mendefinisikan struktur dan alur dari sebuah sistem. Representasi dari sebuah sistem terkandung dari arsitektur pemetaan hubungan antara satu komponen dengan komponen yang lainnya.
 
 ## Dependency Libraries
 
@@ -40,20 +42,25 @@ HMVCP adalah evolusi dari arsitektur Model-View-Controller-Presenter (MVCP) sepe
 HMVCP adalah koleksi dari decks MVCP yang dapat beroperasi sebagai satu mini aplikasi. Setiap MVCP decks benar-benar independen dan dapat dieksekusi tanpa kehadiran MVCP decks lainnya. Semua permintaan yang dibuat untuk MVCP decks harus melalui controller.
 
 
-Modularisasi 
-: Penerapan arsitektur HMVCP secara tidak langsung menjadikan struktur aplikasi menjadi modular.
+### Modularisasi 
+   
+Penerapan arsitektur HMVCP secara tidak langsung menjadikan struktur aplikasi menjadi modular.
 
-Terorganisir 
-: Memiliki direktori untuk masing-masing HMVCP decks yang relevan membuat beban kerja sistem menjadi lebih ringan.
+<dl>
 
-Dapat Digunakan Kembali (Reusable) 
-: Menerapkan arsitektur HMVCP membuat kode-kode source code dari masing-masing HMVCP decks dapat digunakan kembali diproyek-proyek aplikasi lainnya.
+<dt>Terorganisir</dt> 
 
-Mudah Dirawat 
-: Membuat aplikasi menjadi lebih mudah untuk dirawat tanpa harus mengganggu HMVCP decks lainnya.
-
-Mudah Diperluas 
-: Membuat aplikasi menjadi lebih mudah untuk diperluas tanpa mengorbankan kemudahan perawatannya.
+<dd>Memiliki direktori untuk masing-masing HMVCP decks yang relevan membuat beban kerja sistem menjadi lebih ringan.</dd>
+<dt>Dapat Digunakan Kembali (Reusable)</dt> 
+<dd>Menerapkan arsitektur HMVCP membuat kode-kode source code dari masing-masing HMVCP decks dapat digunakan kembali diproyek-proyek aplikasi lainnya.
+</dd>
+<dt>Mudah Dirawat </dt>
+<dd>Membuat aplikasi menjadi lebih mudah untuk dirawat tanpa harus mengganggu HMVCP decks lainnya.
+</dd>
+<dt>Mudah Diperluas </dt>
+<dd>Membuat aplikasi menjadi lebih mudah untuk diperluas tanpa mengorbankan kemudahan perawatannya.
+</dd>
+</dl>
 
 Keuntungan ini akan memungkinkan anda untuk melakukan explorasi lebih dalam pengembangan aplikasi anda dengan sedikit sakit kepala.
 
@@ -63,21 +70,22 @@ Modular HMVCP adalah evolusi dari arsitektur Hierarchical Model-View-Controller-
 
 Modular HMVCP adalah sebuah paket yang didalamnya terdiri dari banyak HMVCP decks. Arsitektur Modular HMVCP ini hanya terdapat pada O2System Framework dan secara default terbagi dalam lima (5) jenis tipe modular:
 
-Apps 
-: Apps merupakan jenis paket yang dapat disebut sebagai aplikasi karena terdiri dari kumpulan paket-paket yang akan dijelaskan pada point-point selanjutnya.
+<dl>
+<dt>Apps </dt>
+<dd>Apps merupakan jenis paket yang dapat disebut sebagai aplikasi karena terdiri dari kumpulan paket-paket yang akan dijelaskan pada point-point selanjutnya.</dd>
 
-Modules 
-: Modules merupakan jenis paket standar yang dipergunakan sebagai front-office modular system. Namun tidak terbatas untuk dipergunakan sebagai back-office modular system.
+<dt>Modules </dt>
+<dd>Modules merupakan jenis paket standar yang dipergunakan sebagai front-office modular system. Namun tidak terbatas untuk dipergunakan sebagai back-office modular system.</dd>
 
-Components 
-: Components merupakan jenis paket standar yang dipergunakan sebagai back-office modular system.
+<dt>Components </dt>
+<dd>Components merupakan jenis paket standar yang dipergunakan sebagai back-office modular system.</dd>
 
-Plugins 
-: Plugins merupakan jenis paket standar yang dipergunakan sebagai add-ons functionality pada tipe paket-paket diatas.
+<dt>Plugins </dt>
+<dd>Plugins merupakan jenis paket standar yang dipergunakan sebagai add-ons functionality pada tipe paket-paket diatas.</dd>
 
-Widgets 
-: Widgets merupakan jenis paket standar yang dipergunakan sebagai add-ons tampilan pada modular system. Berbeda dengan jenis plugins widgets tidak memiliki controller sehingga membuatnya tidak dapat diakses secara langsung.
-
+<dt>Widgets </dt>
+<dd>Widgets merupakan jenis paket standar yang dipergunakan sebagai add-ons tampilan pada modular system. Berbeda dengan jenis plugins widgets tidak memiliki controller sehingga membuatnya tidak dapat diakses secara langsung.</dd>
+</dl>
 Kehebatan arsitektur HMVCP dari O2System Framework tidak berakhir di sini, Anda dapat membuat tipe modular Anda sendiri di dalam dengan namespace yang dapat Anda tentukan sendiri.
 
 ## Search Engine and Human Friendly URL

@@ -1,1 +1,0 @@
-Dalam membuat aplikasi sering kali kita butuh untuk melakukan action sebelum request sampai ke aplikasi kita. Contoh paling sederhana adalah tentang authentikasi. Dalam authentikasi, aplikasi  mengecek apakah user memiliki session aktif sebelum mengizinkannya untuk mengakses resource yang dimiliki aplikasi.

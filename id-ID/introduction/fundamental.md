@@ -1,4 +1,4 @@
-# fundamental
+# Fundamental
 
 O2System Framework merupakan sebuah php framework generasi masa depan yang dirancang untuk dapat dengan mudah beradaptasi dengan mudah dalam pengembangan aplikasi berskala kecil hingga besar. Oleh karena itu mengetahui dasar-dasar yang terdapat dalam O2System Framework menjadi sangat penting agar kita mengerti apa yang menjadi perbedaan-perbedaan dengan framework php lainnya.
 
@@ -42,13 +42,15 @@ O2System SPL juga dilengkapi dengan PHP Pattern Classes yang merupakan sekumpula
 
 ## Dilengkapi dengan Fasilitas Developer
 
-Beberapa kesulitan dari para php programmer adalah ketika harus melakukan proses testing, debugging dan profilling. Namun di O2System Framework sudah terdapat O2System Gear yang menyediakan seperangkat fungsi dan seperangkat library class untuk melakukan unit testing, debugging dan profilling. Berikut ini adalah daftar dari beberapa fitur yang sudah tersedia:
+Beberapa kesulitan dari para php programmer adalah ketika harus melakukan proses testing, debugging dan profilling. O2System Framework sudah diperlengkapi dengan O2System Gear yang menyediakan seperangkat fungsi dan seperangkat library class untuk melakukan unit testing, debugging dan profilling. Berikut ini adalah daftar dari beberapa fitur yang sudah tersedia:
 
 - Browser Debugging Toolbar
 - Debugging Class with Helper
 - Profiler Class
 - Unit Testing Class
 - Browser and Command Line Interface (CLI) Print-Out
+
+> Anda dapat mempelajari lebih dalam di penjelasan mengenai O2System Gear pada link berikut.
 
 ## Kernel Sebagai Core Framework
 
@@ -65,7 +67,7 @@ Tipe kernel dari O2System Framework bisa dimasukkan dalam kategori Hybrid (atau 
 
 ## Pola Desain Singleton
 
-Didalam dunia software engineering singleton pattern adalah sebuah rancangan kode program dimana instantiasi kelas dibatasi hanya dalam satu objek. Didalam O2System Framework hanya diperbolehkan satu instance sistem core oleh karena itu desain singleton pattern inilah yang diterapkan.
+Didalam dunia software engineering singleton pattern adalah sebuah rancangan kode program dimana instantiasi kelas dibatasi hanya dalam satu objek. O2System Framework hanya memperbolehkan satu instance sistem core oleh karena itu desain singleton pattern inilah yang diterapkan.
 
 Fungsi dari instance sistem tersebut adalah untuk mengkoordinasikan seluruh tindakan-tindakan dan service-service yang terjadi di dalam sistem dan aplikasi menjadi satu kesatuan sistem. Hal ini menjadikan sistem dapat beroperasi dengan sangat effisien dalam penggunaan memori yang juga menyediakan status global didalamnya. Instance ini sering disebut juga dengan istilah Super Global Instance.
 

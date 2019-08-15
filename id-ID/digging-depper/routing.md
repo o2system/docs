@@ -1,10 +1,37 @@
 
 # Routing
 
-Dalam membangun website, URL yang mudah diingat itu penting. Selain memudahkan user untuk mengingat alamat web, URL yang deskriptif juga sangat berpengaruh dalam SEO.
+Routing pada O2system sangat flexible. O2system secara default akan membuat sebuah route standar dengan menggunakan nama class Controller dan method dan variabel.
 
+Segmen url O2system biasanya seperti berikut ini.
 
-O2system menangani perihal URL ini dengan serius. Jika menggunakan PHP native, untuk membangun URL, biasanya dibangun dengan subfolder. Misalnya, kita memiliki website  blog dengan beberapa kategori di dalamnya dengan folder kategori di dalam sufolder tersebut. Contohnya bisa kurang lebih seperti ini folder yang akan di bangun
+```
+example.com/class/method/id
+```
+
+Kadang, Anda ingin memetakan beberapa kasus, Anda mungkin ingin memetakan ulang hubungan ataira class atau method yang berbeda dan dapat di panggil sesu dengan alamat url yang di inginkan.
+
+```
+example.com/product/1/
+example.com/product/2/
+example.com/product/3/
+example.com/product/4/
+```
+
+## Konfigurasi Routing
+
+Konfigurasi routing O2system bisa di edit di app/Config/Addressess.php. Pada file ini Anda dapat menentukan kriteria perutean aplikasi web Anda sediri. Route bisa di buat menggunakan wildcard eatau ekspresi reguler.
+
+```php
+// Example Route To Default Controller
+$addresses->any(
+    '/',
+    function () {
+        return new \App\Controllers\Hello();
+    }
+);
+```
+
 
 ## HTTP Verbs
 
@@ -18,7 +45,7 @@ Terdapat 5 jenis verb yang didukung O2system:
 4. `PATCH` : Digunakan untuk melakukan update resource di server.
 5. `DELETE` : Digunakan untuk menghapus resource di server.
 
-PUT dan PATCH sering digunakan untuk hal yang sama (meng-update). Perbedaan keduanya,
+**PUT** dan **PATCH** sering digunakan untuk hal yang sama (meng-update). Perbedaan keduanya,
 secara teoritis PUT bekerja dengan menimpa (replace) resource dengan resource yang baru.
 
 sintaks dasar dari routing O2system menggunakan HTTP Verb seperti berikut ini.
@@ -54,6 +81,3 @@ return '<h1>halaman kontak</h1>';
 <input type="hidden" name="csrf-token" value="{{ $csrfToken }}">
 </form>
 ```
-
-## Redirect Routes
-
